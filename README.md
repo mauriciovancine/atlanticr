@@ -2,12 +2,12 @@
 <!-- badges: start -->
 
 [![Package
-Site](https://github.com/lter/lterdatasampler/workflows/pkgdown/badge.svg)](https://github.com/lter/lterdatasampler/actions)
-[![R-CMD-check](https://github.com/lter/lterdatasampler/workflows/R-CMD-check/badge.svg)](https://github.com/lter/lterdatasampler/actions)
+Site](https://github.com/mauriciovancine/atlanticr/workflows/pkgdown/badge.svg)](https://github.com/mauriciovancine/atlanticr/actions)
+[![R-CMD-check](https://github.com/mauriciovancine/atlanticr/workflows/R-CMD-check/badge.svg)](https://github.com/mauriciovancine/atlanticr/actions)
 
 <!-- badges: end -->
 
-# atlanticr <a href='https://lter.github.io/lterdatasampler/'><img src="man/figures/logo.png" id="home_logo" align="right" height="180"/></a>
+# atlanticr <a href='https://lter.github.io/atlanticr/'><img src="hexagon/logo.png" id="home_logo" align="right" height="180"/></a>
 
 The tropical and subtropical forests along the coast and interior of
 South America used to have one of the largest forests in the world – the
@@ -43,19 +43,20 @@ see individual Articles for data and source details.
 - [`atlantic_amphibians`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html):
 - [`atlantic_ants`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
 - [`atlantic_bats`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
-- [`atlantic_birds`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
-- [`atlantic_bird_traits`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
-- [`atlantic_butterflies`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
-- [`atlantic_camtraps`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
-- [`atlantic_epiphytes`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
-- [`atlantic_frugivory`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
-- [`atlantic_mammals`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
-- [`atlantic_mammal_traits`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
-- [`atlantic_nonvolant_mammals`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
-- [`atlantic_pollination`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_birds`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html):
+- [`atlantic_bird_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html):
+- [`atlantic_butterflies`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_butterflies.html):
+- [`atlantic_camtraps`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html):
+- [`atlantic_epiphytes`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_epiphytes.html):
+- [`atlantic_frugivory`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html):
+- [`atlantic_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html):
+- [`atlantic_mammal_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html):
+- [`atlantic_nonvolant_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html):
+- [`atlantic_pollination`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html):
 - [`atlantic_primates`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html):
 - [`atlantic_small_mammal`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html):
 - [`atlantic_small_mammal_abundance`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html):
+- [`atlantic_spatial`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html):
 
 ## How to provide feedback
 
