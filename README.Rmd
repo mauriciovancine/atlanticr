@@ -62,22 +62,22 @@ remotes::install_github("mauriciovancine/atlanticr")
 Dataset samples currently included in the package are summarized below;
 see individual Articles for data and source details.
 
-- [`atlantic_amphibians`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_ants`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_bats`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_birds`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_bird_traits`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_butterflies`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_camtraps`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_epiphytes`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_frugivory`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_mammals`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_mammal_traits`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_nonvolant_mammals`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_pollination`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_primates`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_small_mammal`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_small_mammal_abundance`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
+- [`atlantic_amphibians`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html):
+- [`atlantic_ants`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_bats`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_birds`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_bird_traits`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_butterflies`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_camtraps`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_epiphytes`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_frugivory`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_mammals`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_mammal_traits`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_nonvolant_mammals`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_pollination`](https://mauriciovancine.github.io/atlanticr/reference/and_vertebrates.html):
+- [`atlantic_primates`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html):
+- [`atlantic_small_mammal`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html):
+- [`atlantic_small_mammal_abundance`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html):
 
 ## How to provide feedback
 
