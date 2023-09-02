@@ -1,9 +1,9 @@
-#' Atlantic Amphibians
+#' Atlantic Bats
 #'
-#' ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America
+#' ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America
 #'
 #' @param type data format, "long" or "wide".
 #'
 #' @export
-atlantic_amphibians <- function(type) {
+atlantic_bats <- function(type) {
 }

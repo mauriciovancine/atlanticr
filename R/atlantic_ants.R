@@ -1,9 +1,9 @@
-#' Atlantic Amphibians
+#' Atlantic Ants
 #'
-#' ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America
+#' ATLANTIC ANTS: a data set of ants in Atlantic Forests of South America
 #'
 #' @param type data format, "long" or "wide".
 #'
 #' @export
-atlantic_amphibians <- function(type) {
+atlantic_ants <- function(type) {
 }
