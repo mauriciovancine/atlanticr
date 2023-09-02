@@ -1,3 +1,25 @@
+---
+output: github_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "75%",
+  warning = FALSE,
+  message = FALSE,
+  fig.retina = 2,
+  fig.align = 'center'
+)
+
+library(gt)
+library(tidyverse)
+```
 
 <!-- badges: start -->
 
@@ -9,13 +31,12 @@ Site](https://github.com/lter/lterdatasampler/workflows/pkgdown/badge.svg)](http
 
 # atlanticr <a href='https://lter.github.io/lterdatasampler/'><img src="man/figures/logo.png" id="home_logo" align="right" height="180"/></a>
 
-The tropical and subtropical forests along the coast and interior of
-South America used to have one of the largest forests in the world – the
-Atlantic Forest – with more than 1.6 million km² spanning Brazil,
-Argentina, and Paraguay. The ATLANTIC collection includes a series of
-Data Papers about the community composition and distribution of plants
-and animals from the Atlantic forest. These papers can be a fundamental
-tool for both scientists and policy makers.
+The tropical and subtropical forests along the coast and interior of South America 
+used to have one of the largest forests in the world – the Atlantic Forest – with 
+more than 1.6 million km² spanning Brazil, Argentina, and Paraguay. The ATLANTIC 
+collection includes a series of Data Papers about the community composition and 
+distribution of plants and animals from the Atlantic forest. These papers can be 
+a fundamental tool for both scientists and policy makers.
 
 The goal of this package is to provide a sampler to gather feedback from
 the community of what will be a larger package containing 28 datasets -
@@ -28,37 +49,38 @@ research and should only be used for teaching purposes**.
 
 ## Installation
 
-You can install the development version of `atlanticr` from GitHub with:
+You can install the development version of `atlanticr` from
+GitHub with:
 
 ``` r
 # install.packages("remotes")
 remotes::install_github("mauriciovancine/atlanticr")
 ```
-
-## The dataset samples
+ 
+## Data sets
 
 Dataset samples currently included in the package are summarized below;
 see individual Articles for data and source details.
 
+- [`atlantic_amphibians`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
 - [`atlantic_ants`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_pollination`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_bird_traits`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_mammals`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_epiphytes`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_butterflies`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_primates`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
 - [`atlantic_bats`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_camtraps`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_amphibians`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_frugivory`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_small_mammal`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
 - [`atlantic_birds`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
+- [`atlantic_bird_traits`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
+- [`atlantic_butterflies`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
+- [`atlantic_camtraps`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
+- [`atlantic_epiphytes`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
+- [`atlantic_frugivory`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
+- [`atlantic_mammals`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
 - [`atlantic_mammal_traits`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
-- [`atlantic_amphibians`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
 - [`atlantic_nonvolant_mammals`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
+- [`atlantic_pollination`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
+- [`atlantic_primates`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
+- [`atlantic_small_mammal`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
+- [`atlantic_small_mammal_abundance`](https://lter.github.io/lterdatasampler/reference/and_vertebrates.html):
 
 ## How to provide feedback
 
 The best way to provide feedback on this package is to open an
-[issue](https://github.com/mauriciovancine/atlanticr/issues) and assign
-the `feedback` label. Thank you!
+[issue](https://github.com/mauriciovancine/atlanticr/issues) and assign the
+`feedback` label. Thank you!
