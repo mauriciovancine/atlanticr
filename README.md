@@ -1,12 +1,4 @@
 
-<!-- badges: start -->
-
-[![Package
-Site](https://github.com/lter/lterdatasampler/workflows/pkgdown/badge.svg)](https://github.com/mauriciovancine/atlanticr/actions)
-[![R-CMD-check](https://github.com/lter/lterdatasampler/workflows/R-CMD-check/badge.svg)](https://github.com/mauriciovancine/atlanticr/actions)
-
-<!-- badges: end -->
-
 # atlanticr <a href='https://lter.github.io/atlanticr/'><img src="hexagon/logo.png" id="home_logo" align="right" height="180"/></a>
 
 The tropical and subtropical forests along the coast and interior of
