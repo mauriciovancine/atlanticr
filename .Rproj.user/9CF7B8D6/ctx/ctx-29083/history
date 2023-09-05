@@ -1,0 +1,7 @@
+library(pkgdown)
+build_site()
+build_site()
+library(atlanticr)
+build_site()
+build_site()
+build_site()

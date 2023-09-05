@@ -1,0 +1,11 @@
+title: atlanticr
+url: https://mauriciovancine.github.io/atlanticr/
+template:
+  bootstrap: 5
+navbar:
+  components:
+   articles:
+    text: Articles
+    menu:
+    - text: "atlantic_amphibians - ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America"
+      href: articles/atlantic_amphibians.html

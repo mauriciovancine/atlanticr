@@ -1,0 +1,163 @@
+library(atlanticr)
+library(pkgdown)
+build_site
+build_site()
+build_site()
+build_site()
+build_site()
+build_site()
+build_site()
+build_site()
+build_site()
+library(atlanticr)
+build_site()
+imgurl <- magick::image_read('hexagon/logo.png')
+sticker(imgurl,
+package = "atlanticr",
+p_size = 13,
+p_color = "white",
+s_x = .9, s_y = .75, s_width = 1.5, s_height = 1.5,
+h_fill = "white",
+h_color = "white",
+filename = "pkgdown/favicon/featured-hex.png")
+library(hexSticker)
+library(png)
+imgurl <- magick::image_read('hexagon/logo.png')
+sticker(imgurl,
+package = "atlanticr",
+p_size = 13,
+p_color = "white",
+s_x = .9, s_y = .75, s_width = 1.5, s_height = 1.5,
+h_fill = "white",
+h_color = "white",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 13,
+p_color = "#057f3f",
+s_x = .9, s_y = .75, s_width = 1.5, s_height = 1.5,
+h_fill = "white",
+h_color = "white",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 13,
+p_color = "white",
+s_x = .9, s_y = .75, s_width = 1.5, s_height = 1.5,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 13,
+p_color = "white",
+s_x = .9, s_y = .75, s_width = 1, s_height = 1.5,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 13,
+p_color = "white",
+s_x = .9, s_y = .75, s_width = 1, s_height = 1,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 13,
+p_color = "white",
+s_x = .9, s_y = .75, s_width = 1.2, s_height = 1.2,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 13,
+p_color = "white",
+s_x = 1, s_y = .75, s_width = 1.2, s_height = 1.2,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 13,
+p_color = "#057f3f",
+s_x = 1, s_y = .75, s_width = 1.2, s_height = 1.2,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 20,
+p_color = "#057f3f",
+s_x = 1, s_y = .75, s_width = 1.2, s_height = 1.2,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 20,
+p_color = "#057f3f",
+p_x = 1,
+p_y = 1,
+s_x = 1, s_y = .75,
+s_width = 1.2, s_height = 1.2,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 20,
+p_color = "#057f3f",
+p_x = 1,
+p_y = 2,
+s_x = 1, s_y = .75,
+s_width = 1.2, s_height = 1.2,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 20,
+p_color = "#057f3f",
+p_x = 1,
+p_y = 1.5,
+s_x = 1, s_y = .75,
+s_width = 1.2, s_height = 1.2,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 25,
+p_color = "#057f3f",
+p_x = 1,
+p_y = 1.5,
+s_x = 1, s_y = .75,
+s_width = 1.2, s_height = 1.2,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "pkgdown/favicon/featured-hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 25,
+p_color = "#057f3f",
+p_x = 1,
+p_y = 1.5,
+s_x = 1, s_y = .75,
+s_width = 1.2, s_height = 1.2,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "hexagon/hex.png")
+sticker(imgurl,
+package = "atlanticr",
+p_size = 25,
+p_color = "#057f3f",
+p_x = 1,
+p_y = 1.5,
+s_x = 1, s_y = .75,
+s_width = 1.2, s_height = 1.2,
+h_fill = "white",
+h_color = "#057f3f",
+filename = "hexagon/logo.png")

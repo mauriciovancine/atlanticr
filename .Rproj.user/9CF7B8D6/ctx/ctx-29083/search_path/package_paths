@@ -1,0 +1,8 @@
+atlanticr="/home/mude/R/x86_64-pc-linux-gnu-library/4.3/atlanticr"
+datasets="/usr/lib/R/library/datasets"
+grDevices="/usr/lib/R/library/grDevices"
+graphics="/usr/lib/R/library/graphics"
+methods="/usr/lib/R/library/methods"
+pkgdown="/home/mude/R/x86_64-pc-linux-gnu-library/4.3/pkgdown"
+stats="/usr/lib/R/library/stats"
+utils="/usr/lib/R/library/utils"

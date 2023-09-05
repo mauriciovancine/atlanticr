@@ -1,0 +1,349 @@
+library(usethis)
+da <- readr::read_csv("/home/mude/data/onedrive/doutorado/cap03/01_data/01_communities/ATLANTIC_AMPHIBIANS_si_sp_longer_fix.csv")
+da2 <- readr::read_csv("/home/mude/data/onedrive/doutorado/cap03/01_data/01_communities/ATLANTIC_AMPHIBIANS_si_sp_wider_fix.csv")
+usethis::use_data(da)
+atlantic_amphibians_longer <- readr::read_csv("/home/mude/data/onedrive/doutorado/cap03/01_data/01_communities/ATLANTIC_AMPHIBIANS_si_sp_longer_fix.csv")
+atlantic_amphibians_wider <- readr::read_csv("/home/mude/data/onedrive/doutorado/cap03/01_data/01_communities/ATLANTIC_AMPHIBIANS_si_sp_wider_fix.csv")
+usethis::use_data(atlantic_amphibians_longer)
+usethis::use_data(atlantic_amphibians_wider)
+usethis::use_data_raw()
+# packages
+library(tidyverse)
+library(fastDummies)
+library(sf)
+library(tmap)
+# download
+download.file(url = "https://esajournals.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fecy.2392&file=ecy2392-sup-0001-DataS1.zip",
+destfile = "ecy2392-sup-0001-datas1.zip", mode = "wb")
+# unzip
+unzip(zipfile = "data-raw/ecy2392-sup-0001-datas1.zip")
+# unzip
+unzip(zipfile = "data-raw/ecy2392-sup-0001-datas1.zip", exdir = "data-raw/")
+# fix data
+readr::read_csv("01_data/01_communities/ATLANTIC_AMPHIBIANS_references.csv",
+locale = readr::locale(encoding = "latin1")) %>%
+readr::write_csv("01_data/ATLANTIC_AMPHIBIANS_references_fix.csv")
+# fix data
+readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_references.csv",
+locale = readr::locale(encoding = "latin1")) %>%
+readr::write_csv("01_data/ATLANTIC_AMPHIBIANS_references_fix.csv")
+# unzip
+unzip(zipfile = "data-raw/ecy2392-sup-0001-datas1.zip", exdir = "data-raw")
+# fix data
+readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_references.csv",
+locale = readr::locale(encoding = "latin1")) %>%
+readr::write_csv("01_data/ATLANTIC_AMPHIBIANS_references_fix.csv")
+# unzip
+unzip(zipfile = "data-raw/ecy2392-sup-0001-datas1.zip", exdir = "data-raw")
+# fix data
+readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_references.csv",
+locale = readr::locale(encoding = "latin1")) %>%
+readr::write_csv("data-raw/ATLANTIC_AMPHIBIANS_references_fix.csv")
+readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_sites.csv",
+locale = readr::locale(encoding = "latin1")) %>%
+readr::write_csv("data-raw/ATLANTIC_AMPHIBIANS_sites_fix.csv")
+readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_species.csv",
+locale = readr::locale(encoding = "latin1")) %>%
+readr::write_csv("data-raw/ATLANTIC_AMPHIBIANS_species_fix.csv")
+# import sites
+si <- readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_sites_fix.csv") %>%
+fastDummies::dummy_cols("sampled_habitat", split = ",") %>%
+dplyr::relocate(sampled_habitat_br:sampled_habitat_NA, .after = sampled_habitat) %>%
+fastDummies::dummy_cols("active_methods", split = ",") %>%
+dplyr::relocate(active_methods_as:active_methods_NA, .after = active_methods) %>%
+fastDummies::dummy_cols("passive_methods", split = ",") %>%
+dplyr::relocate(passive_methods_ar:passive_methods_NA, .after = passive_methods) %>%
+fastDummies::dummy_cols("complementary_methods", split = ",") %>%
+dplyr::relocate(complementary_methods_ae:complementary_methods_NA, .after = complementary_methods) %>%
+fastDummies::dummy_cols("period", split = ",") %>%
+dplyr::relocate(period_da:period_NA, .after = period)
+si
+# import communities
+sp <- read_csv("data-raw/ATLANTIC_AMPHIBIANS_species_fix.csv") %>%
+tidyr::drop_na(valid_name) %>%
+dplyr::select(id, valid_name, individuals) %>%
+dplyr::distinct(id, valid_name, .keep_all = TRUE) %>%
+dplyr::mutate(individuals = tidyr::replace_na(individuals, 1),
+individuals = ifelse(individuals > 0, 1, 1))
+sp
+# import references
+rf <- read_csv("data-raw/ATLANTIC_AMPHIBIANS_references_fix.csv")
+rf
+# pivot communities
+sp_wider <- sp %>%
+tidyr::pivot_wider(id_cols = id, names_from = valid_name,
+values_from = individuals, values_fill = 0)
+sp_wider
+# spn
+spn <- tibble::tibble(id = sp_wider$id, nsp = rowSums(sp_wider[, -1]))
+spn
+# join wider
+si_sp_wider <- dplyr::left_join(si, sp_wider) %>%
+dplyr::left_join(spn) %>%
+dplyr::relocate(nsp, .after = 3) %>%
+dplyr::left_join(rf)
+si_sp_wider
+# join longer
+si_sp_longer <- dplyr::left_join(si, sp) %>%
+dplyr::left_join(spn) %>%
+dplyr::relocate(nsp, .after = 3) %>%
+dplyr::left_join(rf)
+si_sp_longer
+# export
+readr::write_csv(si_sp_wider, "data-raw/ATLANTIC_AMPHIBIANS_si_sp_wider_fix.csv")
+readr::write_csv(si_sp_longer, "data-raw/ATLANTIC_AMPHIBIANS_si_sp_longer_fix.csv")
+# join wider
+atlantic_amphibians_wider <- dplyr::left_join(si, sp_wider) %>%
+dplyr::left_join(spn) %>%
+dplyr::relocate(nsp, .after = 3) %>%
+dplyr::left_join(rf)
+# join wider
+atlantic_amphibians_wider <- dplyr::left_join(si, sp_wider) %>%
+dplyr::left_join(spn) %>%
+dplyr::relocate(nsp, .after = 3) %>%
+dplyr::left_join(rf)
+# join longer
+atlantic_amphibians_longer <- dplyr::left_join(si, sp) %>%
+dplyr::left_join(spn) %>%
+dplyr::relocate(nsp, .after = 3) %>%
+dplyr::left_join(rf)
+sp
+# import references
+rf <- read_csv("data-raw/ATLANTIC_AMPHIBIANS_references_fix.csv")
+# pivot communities
+sp_wider <- sp %>%
+tidyr::pivot_wider(id_cols = id, names_from = valid_name,
+values_from = individuals, values_fill = 0)
+sp_wider
+# spn
+spn <- tibble::tibble(id = sp_wider$id, nsp = rowSums(sp_wider[, -1]))
+spn
+# join wider
+atlantic_amphibians_wider <- dplyr::left_join(si, sp_wider) %>%
+dplyr::left_join(spn) %>%
+dplyr::relocate(nsp, .after = 3) %>%
+dplyr::left_join(rf)
+atlantic_amphibians_wider
+# join longer
+atlantic_amphibians_longer <- dplyr::left_join(si, sp) %>%
+dplyr::left_join(spn) %>%
+dplyr::relocate(nsp, .after = 3) %>%
+dplyr::left_join(rf)
+dplyr::left_join(si, sp) %>%
+dplyr::left_join(spn)
+dplyr::left_join(si, sp) %>%
+dplyr::left_join(spn) %>%
+dplyr::relocate(nsp, .after = 3)
+dplyr::left_join(si, sp) %>%
+dplyr::left_join(spn) %>%
+dplyr::relocate(nsp, .after = 3) %>%
+dplyr::left_join(rf)
+# join longer
+atlantic_amphibians_longer <- dplyr::left_join(si, sp) %>%
+dplyr::left_join(spn) %>%
+dplyr::relocate(nsp, .after = 3) %>%
+dplyr::left_join(rf)
+dplyr::left_join(si, sp) %>%
+dplyr::left_join(spn) %>%
+dplyr::relocate(nsp, .after = 3) %>%
+dplyr::left_join(rf)
+# save data
+usethis::use_data(atlantic_amphibians_wider, overwrite = TRUE)
+usethis::use_data(atlantic_amphibians_longer, overwrite = TRUE)
+# delete files
+unlink(dir(pattern = "ATLANTIC_AMPHIBIANS_"))
+# delete files
+unlink(dir(pattern = "data-raw/ATLANTIC_AMPHIBIANS_"))
+dir(pattern = "data-raw/ATLANTIC_AMPHIBIANS_")
+# delete files
+unlink(dir(pattern = "ATLANTIC_AMPHIBIANS_"), recursive = TRUE)
+# delete files
+unlink(dir(path = "data-raw/", pattern = "ATLANTIC_AMPHIBIANS_"))
+# delete files
+unlink(dir(path = "data-raw/", pattern = "ATLANTIC_AMPHIBIANS_", full.names = TRUE))
+# delete files
+unlink("data-raw/ecy2392-sup-0001-datas1.zip")
+unlink(dir(path = "data-raw/", pattern = "ATLANTIC_AMPHIBIANS_", full.names = TRUE))
+# metadata
+download.file(url = "https://esajournals.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fecy.2392&file=ecy2392-sup-0002-MetadataS1.pdf",
+destfile = "atlantic_amphibians_metadata", mode = "wb")
+# metadata
+download.file(url = "https://esajournals.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fecy.2392&file=ecy2392-sup-0002-MetadataS1.pdf",
+destfile = "atlantic_amphibians_metadata", mode = "wb")
+library(atlanticr)
+atlantic_amphibians(type = "long")
+library(atlanticr)
+atlantic_amphibians(type = "long")
+atlantic_amphibians_longer
+library(atlanticr)
+atlantic_amphibians_longer
+atlantic_amphibians(type = "long")
+atlantic_amphibians(type = "long")
+library(atlanticr)
+atlantic_amphibians(type = "long")
+library(atlanticr)
+atlantic_amphibians(type = "long")
+a <- atlantic_amphibians_longer
+a
+a <- atlantic_amphibians(type = "long")
+a
+return(atlantic_amphibians_wider)
+#' Atlantic Amphibians
+#'
+#' ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America
+#'
+#' @param type data format, "long" or "wide".
+#'
+#' @export
+atlantic_amphibians <- function(type) {
+# type
+if(type == "long"){
+return(atlantic_amphibians_longer)
+}
+if(type == "wide"){
+return(atlantic_amphibians_wider)
+}
+}
+atlantic_amphibians(type = "long")
+#' Atlantic Amphibians
+#'
+#' ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America
+#'
+#' @param type data format, "long" or "wide".
+#'
+#' @export
+atlantic_amphibians <- function(type) {
+# type
+if(type == "long"){
+data(atlantic_amphibians_longer)
+}
+if(type == "wide"){
+return(atlantic_amphibians_wider)
+}
+}
+atlantic_amphibians(type = "long")
+library(atlanticr)
+atlantic_amphibians(type = "long")
+#' Atlantic Amphibians
+#'
+#' ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America
+#'
+#' @param type data format, "long" or "wide".
+#'
+#' @export
+atlantic_amphibians <- function(type) {
+# type
+if(type == "long"){
+return(atlantic_amphibians_longer)
+}
+if(type == "wide"){
+return(atlantic_amphibians_wider)
+}
+}
+#' Atlantic Amphibians
+#'
+#' ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America
+#'
+#' @param type data format, "long" or "wide".
+#'
+#' @export
+atlantic_amphibians <- function(type) {
+# type
+if(type == "long"){
+return(atlantic_amphibians_longer)
+}
+if(type == "wide"){
+return(atlantic_amphibians_wider)
+}
+}
+library(atlanticr)
+atlantic_amphibians(type = "long")
+atlantic_amphibians_longer
+library(atlanticr)
+atlantic_amphibians(type = "long")
+user_r("data")
+use_r("data")
+atlantic_amphibians <- function(type) {
+# type
+if(type == "long"){
+return(atlantic_amphibians_longer)
+}
+if(type == "wide"){
+return(atlantic_amphibians_wider)
+}
+}
+atlantic_amphibians(type = "long")
+# import sites
+si <- readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_sites_fix.csv") %>%
+fastDummies::dummy_cols("sampled_habitat", split = ",") %>%
+dplyr::relocate(sampled_habitat_br:sampled_habitat_NA, .after = sampled_habitat) %>%
+fastDummies::dummy_cols("active_methods", split = ",") %>%
+dplyr::relocate(active_methods_as:active_methods_NA, .after = active_methods) %>%
+fastDummies::dummy_cols("passive_methods", split = ",") %>%
+dplyr::relocate(passive_methods_ar:passive_methods_NA, .after = passive_methods) %>%
+fastDummies::dummy_cols("complementary_methods", split = ",") %>%
+dplyr::relocate(complementary_methods_ae:complementary_methods_NA, .after = complementary_methods) %>%
+fastDummies::dummy_cols("period", split = ",") %>%
+dplyr::relocate(period_da:period_NA, .after = period)
+# import communities
+sp <- read_csv("data-raw/ATLANTIC_AMPHIBIANS_species_fix.csv") %>%
+tidyr::drop_na(valid_name) %>%
+dplyr::select(id, valid_name, individuals) %>%
+dplyr::distinct(id, valid_name, .keep_all = TRUE) %>%
+dplyr::mutate(individuals = tidyr::replace_na(individuals, 1),
+individuals = ifelse(individuals > 0, 1, 1))
+# unzip
+unzip(zipfile = "data-raw/ecy2392-sup-0001-datas1.zip", exdir = "data-raw")
+# fix data
+readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_references.csv",
+locale = readr::locale(encoding = "latin1")) %>%
+readr::write_csv("data-raw/ATLANTIC_AMPHIBIANS_references_fix.csv")
+readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_sites.csv",
+locale = readr::locale(encoding = "latin1")) %>%
+readr::write_csv("data-raw/ATLANTIC_AMPHIBIANS_sites_fix.csv")
+readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_species.csv",
+locale = readr::locale(encoding = "latin1")) %>%
+readr::write_csv("data-raw/ATLANTIC_AMPHIBIANS_species_fix.csv")
+# import sites
+si <- readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_sites_fix.csv") %>%
+fastDummies::dummy_cols("sampled_habitat", split = ",") %>%
+dplyr::relocate(sampled_habitat_br:sampled_habitat_NA, .after = sampled_habitat) %>%
+fastDummies::dummy_cols("active_methods", split = ",") %>%
+dplyr::relocate(active_methods_as:active_methods_NA, .after = active_methods) %>%
+fastDummies::dummy_cols("passive_methods", split = ",") %>%
+dplyr::relocate(passive_methods_ar:passive_methods_NA, .after = passive_methods) %>%
+fastDummies::dummy_cols("complementary_methods", split = ",") %>%
+dplyr::relocate(complementary_methods_ae:complementary_methods_NA, .after = complementary_methods) %>%
+fastDummies::dummy_cols("period", split = ",") %>%
+dplyr::relocate(period_da:period_NA, .after = period)
+# import communities
+sp <- read_csv("data-raw/ATLANTIC_AMPHIBIANS_species_fix.csv") %>%
+tidyr::drop_na(valid_name) %>%
+dplyr::select(id, valid_name, individuals) %>%
+dplyr::distinct(id, valid_name, .keep_all = TRUE) %>%
+dplyr::mutate(individuals = tidyr::replace_na(individuals, 1),
+individuals = ifelse(individuals > 0, 1, 1))
+# import references
+rf <- read_csv("data-raw/ATLANTIC_AMPHIBIANS_references_fix.csv")
+# join longer
+atlantic_amphibians_longer <- dplyr::left_join(si, sp) %>%
+dplyr::relocate(nsp, .after = 3) %>%
+dplyr::left_join(rf)
+# join longer
+atlantic_amphibians_longer <- dplyr::left_join(si, sp) %>%
+dplyr::left_join(rf)
+atlantic_amphibians_longer
+atlantic_amphibians
+# join longer
+atlantic_amphibians <- dplyr::left_join(si, sp) %>%
+dplyr::left_join(rf)
+# save data
+usethis::use_data(atlantic_amphibians, overwrite = TRUE)
+# delete files
+unlink("data-raw/ecy2392-sup-0001-datas1.zip")
+unlink(dir(path = "data-raw/", pattern = "ATLANTIC_AMPHIBIANS_", full.names = TRUE))
+atlantic_amphibians
+library(atlanticr)
+pkgdown::build_site()
+pkgdown::build_site()
+pkgdown::build_site()
