@@ -34,6 +34,8 @@ individual Articles for data and source details.
   ATLANTIC AMPHIBIANS: a data set of amphibian communities from the
   Atlantic Forests of South America
 - [`atlantic_ants`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_ants.html):
+  ATLANTIC ANTS: a data set of ant communities from the Atlantic Forests
+  of South America
 - [`atlantic_bats`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_bats.html):
   ATLANTIC BATS: a data set of bat communities from the Atlantic Forests
   of South America

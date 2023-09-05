@@ -9,5 +9,7 @@ navbar:
     menu:
     - text: "atlantic_amphibians - ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America"
       href: articles/atlantic_amphibians.html
+    - text: "atlantic_ants - ATLANTIC ANTS: a data set of ant communities from the Atlantic Forests of South America"
+      href: articles/atlantic_ants.html
     - text: "atlantic_bats - ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America"
       href: articles/atlantic_bats.html

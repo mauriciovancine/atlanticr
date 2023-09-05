@@ -19,6 +19,5 @@ atlantic_amphibians
 }
 \description{
 ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America
-Includes count and size data for cutthroat trout and salamanders in clear cut or old growth sections of Mack Creek, Andrews Forest LTER.
 }
 \keyword{datasets}

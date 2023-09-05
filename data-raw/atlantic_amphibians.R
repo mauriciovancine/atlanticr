@@ -1,5 +1,5 @@
 #' ---
-#' title: "atlantic amphibian data preparation"
+#' title: "atlantic amphibians data preparation"
 #' ---
 
 # prepare r -------------------------------------------------------------

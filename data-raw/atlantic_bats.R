@@ -1,5 +1,5 @@
 #' ---
-#' title: "atlantic amphibian data preparation"
+#' title: "atlantic bats data preparation"
 #' ---
 
 # prepare r -------------------------------------------------------------
@@ -7,7 +7,7 @@
 # packages
 library(tidyverse)
 
-# atlantic amphibians ----------------------------------------------------
+# atlantic bats ---------------------------------------------------------
 
 # download
 download.file(url = "https://raw.githubusercontent.com/LEEClab/Atlantic_series/master/ATLANTIC_BATS/DATASET/2018_02_d21/ATLANTIC_BATS_2020_comp.xlsx",
