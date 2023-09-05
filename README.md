@@ -22,7 +22,7 @@ You can install the development version of `atlanticr` from GitHub with:
 
 ``` r
 # install.packages("pak")
-pak::install("mauriciovancine/atlanticr")
+pak::pkg_install("mauriciovancine/atlanticr")
 ```
 
 ## Data sets
