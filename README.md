@@ -35,6 +35,8 @@ individual Articles for data and source details.
   Atlantic Forests of South America
 - [`atlantic_ants`](https://mauriciovancine.github.io/atlanticr/docs/reference/atlantic_ants.html):
 - [`atlantic_bats`](https://mauriciovancine.github.io/atlanticr/docs/reference/atlantic_bats.html):
+  ATLANTIC BATS: a data set of bat communities from the Atlantic Forests
+  of South America
 - [`atlantic_birds`](https://mauriciovancine.github.io/atlanticr/docs/reference/atlantic_birds.html):
 - [`atlantic_bird_traits`](https://mauriciovancine.github.io/atlanticr/docs/reference/atlantic_bird_traits.html):
 - [`atlantic_butterflies`](https://mauriciovancine.github.io/atlanticr/docs/reference/atlantic_butterflies.html):
