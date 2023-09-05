@@ -1,0 +1,60 @@
+---
+title: "atlantic_bats - ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_bats - ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- `atlantic_bats`
+
+# Introduction
+
+The `atlantic_bats` data set contains 
+
+# Data exploration
+
+# Citations
+
+Muylaert et al. 2017. ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America. *Ecology*, 98(12), 3227-3227. https://doi.org/10.1002/ecy.2007
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+download.file(url = "https://raw.githubusercontent.com/LEEClab/Atlantic_series/master/ATLANTIC_BATS/DATASET/2018_02_d21/ATLANTIC_BATS_2020_comp.xlsx", destfile = "data-raw/ATLANTIC_BATS_2020_comp.xlsx", mode = "wb")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# import data
+atlantic_bats <- readxl::read_excel("data-raw/ATLANTIC_BATS_2020_comp.xlsx") %>%
+    janitor::clean_names() %>%
+    dplyr::select(-id_20, -id_137) %>%
+    dplyr::rename(id = id_1)
+
+# separate data
+atlantic_bats_sites <- atlantic_bats %>%
+    dplyr::select(c(1:31, 136:139))
+
+atlantic_bats_species <- atlantic_bats %>%
+    dplyr::select(c(1, 32:135)) %>%
+    tidyr::pivot_longer(cols = -1,
+                        names_to = "species",
+                        values_to = "abundance")
+
+# join
+atlantic_bats <- dplyr::left_join(atlantic_bats_sites, atlantic_bats_species)
+```
