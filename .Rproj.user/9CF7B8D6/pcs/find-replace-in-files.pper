@@ -1,6 +1,6 @@
 {
     "dialog-state": {
-        "query": "atlantic_amphibians.html",
+        "query": "logo.png",
         "path": "",
         "regex": false,
         "caseSensitive": false,
@@ -9,7 +9,7 @@
         "useGitGrep": true,
         "excludeGitIgnore": true,
         "excludeFilePatterns": [],
-        "resultsCount": 2,
+        "resultsCount": 29,
         "errorCount": 0,
         "replaceErrors": "",
         "projectRelative": true
