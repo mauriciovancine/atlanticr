@@ -46,6 +46,8 @@ individual Articles for data and source details.
 - [`atlantic_epiphytes`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_epiphytes.html):
 - [`atlantic_frugivory`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html):
 - [`atlantic_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html):
+  ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized
+  mammals of the Atlantic Forest of South America
 - [`atlantic_mammal_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html):
 - [`atlantic_nonvolant_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html):
 - [`atlantic_pollination`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html):

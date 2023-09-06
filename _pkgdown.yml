@@ -13,3 +13,5 @@ navbar:
       href: articles/atlantic_ants.html
     - text: "atlantic_bats - ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America"
       href: articles/atlantic_bats.html
+    - text: "atlantic_mammals - ATLANTIC MAMMALS: a data set of mammal communities from the Atlantic Forests of South America"
+      href: articles/atlantic_mammals.html

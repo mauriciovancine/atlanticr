@@ -1,0 +1,48 @@
+---
+title: "atlantic_mammals - ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_mammals - ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- `atlantic_mammals`
+
+# Introduction
+
+The `atlantic_mammals` data set contains 
+
+# Data exploration
+
+# Citations
+
+Solza et al. 2019. ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America. *Ecology*, 100(10), e02785. https://doi.org/10.1002/ecy.2785
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.2785
+
+# unzip
+unzip(zipfile = "data-raw/ecy2785-sup-0001-datas1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# fix data
+atlantic_mammals <- readr::read_csv("data-raw/ATLANTIC_MAMMAL_MID_LARGE _assemblages_and_sites.csv") %>%
+    janitor::clean_names()
+```
