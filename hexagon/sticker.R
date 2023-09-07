@@ -1,34 +1,24 @@
 library(tidyverse)
-library(geodata)
-library(terra)
+library(sf)
+library(tmap)
 library(hexSticker)
-library(png)
 
 # data
-br <- geodata::gadm(country = "Brazil", path = "hexagon/", level = 0) %>%
-    terra::crop(terra::ext(-75, -33, -35, 5))
-plot(br)
-
-br_r <- rast(br, ncols = 500, nrows = 500)
-
-br_raster <- terra::rasterize(br, br_r)
-br_raster
-plot(br_raster)
-
-terra::writeVector(br, "hexagon/br.gpkg", overwrite = TRUE)
-terra::writeRaster(br_raster, "hexagon/br.tif", overwrite = TRUE)
-
 af <- terra::vect(x = "hexagon/af.gpkg")
-af_raster <- terra::rasterize(af, br_r)
+af_sim <- sf::st_simplify(sf::st_as_sf(af), dTolerance = 3e4) %>%
+    sf::st_crop(xmin = -57.5, ymin = -32, xmax = -33, ymax = -5)
 
 set.seed(42)
-af_p <- terra::spatSample(af, 100)
+af_p <- sf::st_sample(af_sim, 100)
 
-png(filename = "hexagon/img.png", width = 20, height = 20, units = "cm", bg = NA, res = 300)
-plot(br_raster, col = "#dfdfdf", axes = FALSE, legend = FALSE)
-plot(af_raster, col = "#7ce93a", axes = FALSE, legend = FALSE, add = TRUE)
-plot(af_p, add = TRUE)
-dev.off()
+map <- tm_shape(af_sim)+
+    tm_fill(col = "#90b13a") +
+    tm_shape(af_p) +
+    tm_dots(col = "black", size = 1, alpha = .5) +
+    tm_layout(frame = FALSE, bg.color = "transparent")
+map
+
+tmap::tmap_save(tm = map, filename = "hexagon/img.png", width = 20, height = 20, units = "cm", dpi = 300, bg = NA)
 
 # sticker -----------------------------------------------------------------
 
@@ -37,33 +27,43 @@ img <- magick::image_read('hexagon/img.png')
 
 hexSticker::sticker(
     subplot = img,
-    s_x = 1,
-    s_y = .73,
-    s_width = 1.4,
-    s_height = 1.4,
+    s_x = 1.05,
+    s_y = .9,
+    s_width = 1.5,
+    s_height = 1.5,
     package = "atlanticr",
     p_x = 1,
-    p_y = 1.5,
-    p_color = "forestgreen",
+    p_y = 1.6,
+    p_color = "black",
     p_size = 25,
-    h_fill = "white",
-    h_color = "forestgreen",
+    h_fill = "#feffec",
+    h_color = "#90b13a",
+    url = "mauriciovancine.github.io/atlanticr",
+    u_x = 1,
+    u_y = .09,
+    u_size = 6,
+    u_color = "gray50",
     filename = "hexagon/logo.png",
     dpi = 400)
 
 hexSticker::sticker(
     subplot = img,
-    s_x = 1,
-    s_y = .73,
-    s_width = 1.4,
-    s_height = 1.4,
+    s_x = 1.05,
+    s_y = .9,
+    s_width = 1.5,
+    s_height = 1.5,
     package = "atlanticr",
     p_x = 1,
-    p_y = 1.5,
-    p_color = "forestgreen",
+    p_y = 1.6,
+    p_color = "black",
     p_size = 25,
-    h_fill = "white",
-    h_color = "forestgreen",
+    h_fill = "#feffec",
+    h_color = "#90b13a",
+    url = "mauriciovancine.github.io/atlanticr",
+    u_x = 1,
+    u_y = .09,
+    u_size = 6,
+    u_color = "gray50",
     filename = "man/figures/logo.png",
     dpi = 400)
 
