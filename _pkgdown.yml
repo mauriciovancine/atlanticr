@@ -15,3 +15,5 @@ navbar:
       href: articles/atlantic_bats.html
     - text: "atlantic_mammals - ATLANTIC MAMMALS: a data set of mammal communities from the Atlantic Forests of South America"
       href: articles/atlantic_mammals.html
+    - text: "atlantic_mammal_traits - ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America"
+      href: articles/atlantic_mammal_traits.html

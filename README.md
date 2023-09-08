@@ -49,6 +49,8 @@ individual Articles for data and source details.
   ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized
   mammals of the Atlantic Forest of South America
 - [`atlantic_mammal_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html):
+  ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals
+  in the Atlantic Forest of South America
 - [`atlantic_nonvolant_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html):
 - [`atlantic_pollination`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html):
 - [`atlantic_primates`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html):

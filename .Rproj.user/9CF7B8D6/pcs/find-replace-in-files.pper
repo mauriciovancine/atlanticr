@@ -1,6 +1,6 @@
 {
     "dialog-state": {
-        "query": "logo.png",
+        "query": "atlantic_mammal_trais - ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America",
         "path": "",
         "regex": false,
         "caseSensitive": false,
@@ -9,7 +9,7 @@
         "useGitGrep": true,
         "excludeGitIgnore": true,
         "excludeFilePatterns": [],
-        "resultsCount": 29,
+        "resultsCount": 9,
         "errorCount": 0,
         "replaceErrors": "",
         "projectRelative": true

@@ -1,0 +1,48 @@
+---
+title: "atlantic_mammal_traits - ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_mammal_traits - ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- `atlantic_mammal_traits`
+
+# Introduction
+
+The `atlantic_mammal_traits` data set contains 
+
+# Data exploration
+
+# Citations
+
+Gonçalves et al. 2019. ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America. *Ecology*, 99(2), 498-498. https://doi.org/10.1002/ecy.2106
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.2106
+
+# unzip
+unzip(zipfile = "data-raw/ecy2106-sup-0002-datas1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# fix data
+atlantic_mammal_traits <- readr::read_csv("data-raw/ATLANTIC_TR_all_data.csv") %>%
+    janitor::clean_names()
+```
