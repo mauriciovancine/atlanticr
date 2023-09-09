@@ -26,7 +26,7 @@ The `atlantic_mammals` data set contains
 
 # Citations
 
-Solza et al. 2019. ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America. *Ecology*, 100(10), e02785. https://doi.org/10.1002/ecy.2785
+Souza et al. 2019. ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America. *Ecology*, 100(10), e02785. https://doi.org/10.1002/ecy.2785
 
 # How we processed the raw data
 

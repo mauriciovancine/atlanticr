@@ -17,10 +17,6 @@ library(fastDummies)
 unzip(zipfile = "data-raw/ecy2392-sup-0001-datas1.zip", exdir = "data-raw")
 
 # fix data
-readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_references.csv",
-                locale = readr::locale(encoding = "latin1")) %>%
-    readr::write_csv("data-raw/ATLANTIC_AMPHIBIANS_references_fix.csv")
-
 readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_sites.csv",
                 locale = readr::locale(encoding = "latin1")) %>%
     readr::write_csv("data-raw/ATLANTIC_AMPHIBIANS_sites_fix.csv")
@@ -29,8 +25,12 @@ readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_species.csv",
                 locale = readr::locale(encoding = "latin1")) %>%
     readr::write_csv("data-raw/ATLANTIC_AMPHIBIANS_species_fix.csv")
 
+readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_references.csv",
+                locale = readr::locale(encoding = "latin1")) %>%
+    readr::write_csv("data-raw/ATLANTIC_AMPHIBIANS_references_fix.csv")
+
 # import sites
-si <- readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_sites_fix.csv") %>%
+atlantic_amphibians_sites <- readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_sites_fix.csv") %>%
     fastDummies::dummy_cols("sampled_habitat", split = ",") %>%
     dplyr::relocate(sampled_habitat_br:sampled_habitat_NA, .after = sampled_habitat) %>%
     fastDummies::dummy_cols("active_methods", split = ",") %>%
@@ -42,8 +42,8 @@ si <- readr::read_csv("data-raw/ATLANTIC_AMPHIBIANS_sites_fix.csv") %>%
     fastDummies::dummy_cols("period", split = ",") %>%
     dplyr::relocate(period_da:period_NA, .after = period)
 
-# import communities
-sp <- read_csv("data-raw/ATLANTIC_AMPHIBIANS_species_fix.csv") %>%
+# import species
+atlantic_amphibians_species <- read_csv("data-raw/ATLANTIC_AMPHIBIANS_species_fix.csv") %>%
     tidyr::drop_na(valid_name) %>%
     dplyr::select(id, valid_name, individuals) %>%
     dplyr::distinct(id, valid_name, .keep_all = TRUE) %>%
@@ -51,11 +51,12 @@ sp <- read_csv("data-raw/ATLANTIC_AMPHIBIANS_species_fix.csv") %>%
                   individuals = ifelse(individuals > 0, 1, 1))
 
 # import references
-rf <- read_csv("data-raw/ATLANTIC_AMPHIBIANS_references_fix.csv")
+atlantic_amphibians_references <- read_csv("data-raw/ATLANTIC_AMPHIBIANS_references_fix.csv")
 
 # join longer
-atlantic_amphibians <- dplyr::left_join(si, sp) %>%
-    dplyr::left_join(rf)
+atlantic_amphibians <- atlantic_amphibians_sites %>%
+    dplyr::left_join(atlantic_amphibians_species) %>%
+    dplyr::left_join(atlantic_amphibians_references)
 
 # save data
 usethis::use_data(atlantic_amphibians, overwrite = TRUE)

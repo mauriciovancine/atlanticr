@@ -42,6 +42,8 @@ individual Articles for data and source details.
 - [`atlantic_birds`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html):
 - [`atlantic_bird_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html):
 - [`atlantic_butterflies`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_butterflies.html):
+  Atlantic butterflies: a data set of fruit-feeding butterfly
+  communities from the Atlantic forests
 - [`atlantic_camtraps`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html):
 - [`atlantic_epiphytes`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_epiphytes.html):
 - [`atlantic_frugivory`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html):
