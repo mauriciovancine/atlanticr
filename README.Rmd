@@ -43,27 +43,44 @@ GitHub with:
 pak::pkg_install("mauriciovancine/atlanticr")
 ```
  
-## Data sets
+## Datasets
 
-Data set currently included in the package are summarized below;
+Dataset currently included in the package are summarized below;
 see individual Articles for data and source details.
 
+**Vertebrates**
+
 - [`atlantic_amphibians`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html): ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America
-- [`atlantic_ants`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_ants.html): ATLANTIC ANTS: a data set of ant communities from the Atlantic Forests of South America
 - [`atlantic_bats`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_bats.html): ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America
 - [`atlantic_birds`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html):
-- [`atlantic_bird_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html):
-- [`atlantic_butterflies`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_butterflies.html): Atlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests
 - [`atlantic_camtraps`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html):
-- [`atlantic_epiphytes`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_epiphytes.html):
-- [`atlantic_frugivory`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html):
 - [`atlantic_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html): ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America
-- [`atlantic_mammal_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html): ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America
 - [`atlantic_nonvolant_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html):
-- [`atlantic_pollination`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html):
 - [`atlantic_primates`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html):
 - [`atlantic_small_mammal`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html):
 - [`atlantic_small_mammal_abundance`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html):
+
+**Vertebrate traits**
+
+- [`atlantic_bird_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html):
+- [`atlantic_mammal_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html): ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America
+
+**Invertebrates**
+
+- [`atlantic_ants`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_ants.html): ATLANTIC ANTS: a data set of ant communities from the Atlantic Forests of South America
+- [`atlantic_butterflies`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_butterflies.html): Atlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests
+
+**Animal-plants interaction**
+
+- [`atlantic_frugivory`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html):
+- [`atlantic_pollination`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html):
+
+**Plants**
+
+- [`atlantic_epiphytes`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_epiphytes.html):
+
+**Spatial**
+
 - [`atlantic_spatial`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html):
 
 ## How to provide feedback

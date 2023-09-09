@@ -2,7 +2,7 @@
 title: "atlantic_butterflies - Atlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{atlantic_butterflies - AAtlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests}
+  %\VignetteIndexEntry{atlantic_butterflies - Atlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
