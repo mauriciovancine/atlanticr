@@ -1,0 +1,48 @@
+---
+title: "atlantic_bird_traits - ATLANTIC BIRD TRAITS: a data set of bird morphological traits from the Atlantic forests of South America"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_bird_traits - ATLANTIC BIRD TRAITS: a data set of bird morphological traits from the Atlantic forests of South America}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- `atlantic_bird_traits`
+
+# Introduction
+
+The `atlantic_bird_traits` data set contains 
+
+# Data exploration
+
+# Citations
+
+Rodrigues et al. 2019. ATLANTIC BIRD TRAITS: a data set of bird morphological traits from the Atlantic forests of South America. *Ecology*, 100(6), e02647. https://doi.org/10.1002/ecy.2647
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.2647
+
+# unzip
+unzip(zipfile = "data-raw/ecy2647-sup-0001-datas1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# fix data
+atlantic_bird_traits <- readr::read_csv("data-raw/ATLANTIC_BIRD_TRAITS_completed_2018_11_d05.csv") %>%
+    janitor::clean_names()
+```

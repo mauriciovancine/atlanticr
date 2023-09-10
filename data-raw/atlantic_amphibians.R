@@ -63,4 +63,4 @@ usethis::use_data(atlantic_amphibians, overwrite = TRUE)
 
 # delete files
 unlink("data-raw/ecy2392-sup-0001-datas1.zip")
-unlink(dir(path = "data-raw/", pattern = "ATLANTIC_AMPHIBIANS_", full.names = TRUE))
+unlink("data-raw/ATLANTIC_AMPHIBIANS_*")

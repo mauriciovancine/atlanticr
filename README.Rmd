@@ -62,7 +62,7 @@ see individual Articles for data and source details.
 
 **Vertebrate traits**
 
-- [`atlantic_bird_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html):
+- [`atlantic_bird_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html): ATLANTIC BIRD TRAITS: a data set of bird morphological traits from the Atlantic forests of South America
 - [`atlantic_mammal_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html): ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America
 
 **Invertebrates**
