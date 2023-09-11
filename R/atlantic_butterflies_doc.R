@@ -1,4 +1,4 @@
-#' Atlantic butterflies
+#' Atlantic Butterflies
 #'
 #' Atlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests
 #'

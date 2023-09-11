@@ -3,7 +3,7 @@
 \docType{data}
 \name{atlantic_butterflies}
 \alias{atlantic_butterflies}
-\title{Atlantic butterflies}
+\title{Atlantic Butterflies}
 \format{
 A tibble with 7,062 rows and 25 variables:
 \describe{

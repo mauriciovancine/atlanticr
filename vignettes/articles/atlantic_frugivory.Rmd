@@ -1,0 +1,48 @@
+---
+title: "atlantic_frugivory - Atlantic frugivory: a plant–frugivore interaction data set for the Atlantic Forest"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_frugivory - Atlantic frugivory: a plant–frugivore interaction data set for the Atlantic Forest}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- `atlantic_frugivory`
+
+# Introduction
+
+The `atlantic_frugivory` data set contains 
+
+# Data exploration
+
+# Citations
+
+Bello et al. 2017. Atlantic frugivory: a plant–frugivore interaction data set for the Atlantic Forest. *Ecology*, 98(6), 1729-1729. https://doi.org/10.1002/ecy.1818
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.1818
+
+# unzip
+unzip(zipfile = "data-raw/ecy1818-sup-0002-datas1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# import data
+atlantic_frugivory <- readr::read_csv("data-raw/ATLANTIC_frugivory.csv") %>%
+    janitor::clean_names()
+```

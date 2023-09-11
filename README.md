@@ -69,6 +69,8 @@ individual Articles for data and source details.
 **Animal-plants interaction**
 
 - [`atlantic_frugivory`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html):
+  Atlantic frugivory: a plant–frugivore interaction data set for the
+  Atlantic Forest
 - [`atlantic_pollination`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html):
 
 **Plants**
