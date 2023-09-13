@@ -1,0 +1,32 @@
+---
+title: "atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- `atlantic_spatial`
+- `atlantic_spatial_download`
+
+# Introduction
+
+The `atlantic_spatial` data set contains 
+
+# Data exploration
+
+# Citations
+
+Vancine et al. ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America. *Ecology*
+
+# How we processed the raw data

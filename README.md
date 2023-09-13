@@ -12,8 +12,8 @@ papers are a fundamental tool for both scientists and policy makers.
 
 The goal of this package is to provide data from the ATLANTIC, a series
 of data papers by Ecology on biodiversity data from the Atlantic Forest.
-Currently, there are 16 data sets: nine about vertebrates, two about
-vertebrate traits, two about invertebrates, two about interactions
+Currently, there are 17 data sets: nine about vertebrates, two about
+vertebrate traits, two about invertebrates, three about interactions
 animal-plant, one about plant, and one about spatial data.
 
 ## Installation
@@ -72,6 +72,9 @@ individual Articles for data and source details.
   Atlantic frugivory: a plant–frugivore interaction data set for the
   Atlantic Forest
 - [`atlantic_pollination`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html):
+- [`atlantic_flower_invertebrate_interactions`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_flower_invertebrate_interactions.html):
+  Atlantic flower–invertebrate interactions: A data set of occurrence
+  and frequency of floral visits
 
 **Plants**
 
@@ -80,6 +83,8 @@ individual Articles for data and source details.
 **Spatial**
 
 - [`atlantic_spatial`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html):
+  ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and
+  anthropogenic metrics for the Atlantic Forests of South America
 
 ## How to provide feedback
 

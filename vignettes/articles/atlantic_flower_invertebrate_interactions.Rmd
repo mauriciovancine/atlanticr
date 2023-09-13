@@ -1,0 +1,48 @@
+---
+title: "atlantic_flower_invertebrate_interactions - Atlantic flower–invertebrate interactions: A data set of occurrence and frequency of floral visits"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_flower_invertebrate_interactions - Atlantic flower–invertebrate interactions: A data set of occurrence and frequency of floral visits}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- `atlantic_flower_invertebrate_interactions`
+
+# Introduction
+
+The `atlantic_flower_invertebrate_interactions` data set contains 
+
+# Data exploration
+
+# Citations
+
+Boscolo et al. 2022. Atlantic flower–invertebrate interactions: A data set of occurrence and frequency of floral visits. *Ecology*, 104(3), e3900. https://doi.org/10.1002/ecy.3900
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.3900
+
+# unzip
+unzip(zipfile = "data-raw/ecy3900-sup-0001-data_s1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# fix data
+atlantic_flower_invertebrate_interactions <- readr::read_csv("data-raw/AtlanticForestInvertFloInteractionData_2022-07.csv") %>%
+    janitor::clean_names()
+```
