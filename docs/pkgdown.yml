@@ -7,12 +7,13 @@ articles:
   atlantic_bats: atlantic_bats.html
   atlantic_bird_traits: atlantic_bird_traits.html
   atlantic_butterflies: atlantic_butterflies.html
+  atlantic_epyphites: atlantic_epyphites.html
   atlantic_flower_invertebrate_interactions: atlantic_flower_invertebrate_interactions.html
   atlantic_frugivory: atlantic_frugivory.html
   atlantic_mammal_traits: atlantic_mammal_traits.html
   atlantic_mammals: atlantic_mammals.html
   atlantic_spatial: atlantic_spatial.html
-last_built: 2023-09-13T14:20Z
+last_built: 2023-09-14T17:09Z
 urls:
   reference: https://mauriciovancine.github.io/atlanticr/reference
   article: https://mauriciovancine.github.io/atlanticr/articles

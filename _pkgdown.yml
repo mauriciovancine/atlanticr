@@ -17,6 +17,8 @@ navbar:
       href: articles/atlantic_bird_traits.html
     - text: "atlantic_butterflies - Atlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests"
       href: articles/atlantic_butterflies.html
+    - text: "atlantic_epiphytes - ATLANTIC EPIPHYTES: a data set of vascular and non-vascular epiphyte plants and lichens from the Atlantic Forest"
+      href: articles/atlantic_epiphyte.html
     - text: "atlantic_flower_invertebrate_interactions - Atlantic flower–invertebrate interactions: A data set of occurrence and frequency of floral visits"
       href: articles/atlantic_flower_invertebrate_interactions.html
     - text: "atlantic_frugivory - Atlantic frugivory: a plant–frugivore interaction data set for the Atlantic Forest"

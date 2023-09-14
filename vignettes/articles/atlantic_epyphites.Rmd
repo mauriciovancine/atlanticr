@@ -1,0 +1,56 @@
+---
+title: "atlantic_epiphytes - ATLANTIC EPIPHYTES: a data set of vascular and non-vascular epiphyte plants and lichens from the Atlantic Forest"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_epiphytes - ATLANTIC EPIPHYTES: a data set of vascular and non-vascular epiphyte plants and lichens from the Atlantic Forest}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- `atlantic_epiphytes`
+
+# Introduction
+
+The `atlantic_epiphytes` data set contains 
+
+# Data exploration
+
+# Citations
+
+Ramos et al. 2019. ATLANTIC EPIPHYTES: a data set of vascular and non-vascular epiphyte plants and lichens from the Atlantic Forest. *Ecology*, 100(2), e02541. https://doi.org/10.1002/ecy.2541
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.2541
+
+# unzip
+unzip(zipfile = "data-raw/ecy2541-sup-0002-datas1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# fix data
+atlantic_epiphytes_abundance <- readr::read_delim("data-raw/DataS1_Abundance.txt", delim = "\t") %>%
+    janitor::clean_names()
+
+atlantic_epiphytes_occurrence <- readr::read_delim("data-raw/DataS1_Occurrence.txt", delim = "\t") %>%
+    janitor::clean_names() %>%
+    dplyr::mutate(year_finish = as.numeric(year_finish))
+
+# combine data
+atlantic_epiphytes <- dplyr::bind_rows(atlantic_epiphytes_abundance, atlantic_epiphytes_occurrence)
+atlantic_epiphytes
+```

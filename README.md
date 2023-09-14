@@ -79,6 +79,8 @@ individual Articles for data and source details.
 **Plants**
 
 - [`atlantic_epiphytes`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_epiphytes.html):
+  ATLANTIC EPIPHYTES: a data set of vascular and non-vascular epiphyte
+  plants and lichens from the Atlantic Forest
 
 **Spatial**
 
