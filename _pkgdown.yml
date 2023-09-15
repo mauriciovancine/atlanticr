@@ -18,7 +18,7 @@ navbar:
     - text: "atlantic_butterflies - Atlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests"
       href: articles/atlantic_butterflies.html
     - text: "atlantic_epiphytes - ATLANTIC EPIPHYTES: a data set of vascular and non-vascular epiphyte plants and lichens from the Atlantic Forest"
-      href: articles/atlantic_epiphyte.html
+      href: articles/atlantic_epiphytes.html
     - text: "atlantic_flower_invertebrate_interactions - Atlantic flower–invertebrate interactions: A data set of occurrence and frequency of floral visits"
       href: articles/atlantic_flower_invertebrate_interactions.html
     - text: "atlantic_frugivory - Atlantic frugivory: a plant–frugivore interaction data set for the Atlantic Forest"
@@ -27,6 +27,8 @@ navbar:
       href: articles/atlantic_mammals.html
     - text: "atlantic_mammal_traits - ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America"
       href: articles/atlantic_mammal_traits.html
+    - text: "atlantic_pollination - ATLANTIC POLLINATION: a data set of flowers and interaction with nectar-feeding vertebrates from the Atlantic Forest"
+      href: articles/atlantic_pollination.html
     - text: "atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America"
       href: articles/atlantic_spatial.html
 

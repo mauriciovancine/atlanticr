@@ -1,6 +1,6 @@
 {
     "dialog-state": {
-        "query": "atlantic_mammal_trais - ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America",
+        "query": "epyphites",
         "path": "",
         "regex": false,
         "caseSensitive": false,
@@ -9,7 +9,7 @@
         "useGitGrep": true,
         "excludeGitIgnore": true,
         "excludeFilePatterns": [],
-        "resultsCount": 9,
+        "resultsCount": 14,
         "errorCount": 0,
         "replaceErrors": "",
         "projectRelative": true

@@ -16,11 +16,11 @@ knitr::opts_chunk$set(
 
 ### Dataset used
 
-- `atlantic_amphibians`
+- [`atlantic_amphibians`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html)
 
 # Introduction
 
-The `atlantic_amphibians` dataset contains 
+The [`atlantic_amphibians`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html) dataset contains 
 
 # Data exploration
 

@@ -1,0 +1,61 @@
+---
+title: "atlantic_pollination - ATLANTIC POLLINATION: a data set of flowers and interaction with nectar-feeding vertebrates from the Atlantic Forest"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_pollination - ATLANTIC POLLINATION: a data set of flowers and interaction with nectar-feeding vertebrates from the Atlantic Forest}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- `atlantic_pollination`
+
+# Introduction
+
+The `atlantic_pollination` data set contains 
+
+# Data exploration
+
+# Citations
+
+Iamara-Nogueira et al. 2021. ATLANTIC POLLINATION: a data set of flowers and interaction with nectar-feeding vertebrates from the Atlantic Forest. *Ecology*, 103(2), e03595. https://doi.org/10.1002/ecy.3595
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.3595
+
+# unzip
+unzip(zipfile = "data-raw/ecy3595-sup-0001-datas1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# fix data
+atlantic_pollination <- readr::read_delim("data-raw/DataS1/ATLANTIC-floverint_int.csv", delim = ";") %>%
+    janitor::clean_names()
+    dplyr::mutate(scientific_name_plant_ver = paste0(genera_plan_ver, "_", sp_plant_ver),
+                  scientific_name_vert_ver = paste0(genera_floralvisitor_ver, "_", sp_floralvisitor_ver),
+                  .after = 3)
+
+atlantic_pollination_plant <- readr::read_delim("data-raw/DataS1/ATLANTIC-floverint_plant.csv", delim = ";") %>%
+    janitor::clean_names() %>%
+    dplyr::select(1:26) %>%
+    dplyr::mutate(scientific_name_plant_ver = paste0(genera, "_", species), .after = 1)
+
+atlantic_pollination_vert <- readr::read_delim("data-raw/DataS1/ATLANTIC-floverint_vert.csv", delim = ";") %>%
+    janitor::clean_names() %>%
+    dplyr::select(1:15) %>%
+    dplyr::mutate(scientific_name_vert_ver = paste0(genera_ver, "_", species_ver), .after = 1)
+```

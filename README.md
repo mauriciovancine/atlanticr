@@ -72,6 +72,8 @@ individual Articles for data and source details.
   Atlantic frugivory: a plant–frugivore interaction data set for the
   Atlantic Forest
 - [`atlantic_pollination`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html):
+  ATLANTIC POLLINATION: a data set of flowers and interaction with
+  nectar-feeding vertebrates from the Atlantic Forest
 - [`atlantic_flower_invertebrate_interactions`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_flower_invertebrate_interactions.html):
   Atlantic flower–invertebrate interactions: A data set of occurrence
   and frequency of floral visits
