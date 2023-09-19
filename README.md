@@ -47,6 +47,8 @@ individual Articles for data and source details.
 - [`atlantic_primates`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html):
 - [`atlantic_small_mammal`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html):
 - [`atlantic_small_mammal_abundance`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html):
+  Abundance of small mammals in the Atlantic Forest (ASMAF): a data set
+  for analyzing tropical community patterns
 
 **Vertebrate traits**
 

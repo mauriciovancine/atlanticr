@@ -23,6 +23,22 @@ atlantic_pollination <- readr::read_delim("data-raw/DataS1/ATLANTIC-floverint_in
                   scientific_name_vert_ver = paste0(genera_floralvisitor_ver, "_", sp_floralvisitor_ver),
                   .after = 3)
 
+da <- atlantic_pollination %>%
+    group_by(longitude, latitude) %>%
+    summarise(n = n()) %>%
+    arrange(n)
+da
+
+da <- atlantic_pollination %>%
+    filter(pollinator_group %in% c("hummingbird", "bat", "bird")) %>%
+    group_by(longitude, latitude, pollinator_group) %>%
+    summarise(n = n()) %>%
+    arrange(-n)
+da
+
+unique(atlantic_pollination$pollinator_group)
+
+
 atlantic_pollination_plant <- readr::read_delim("data-raw/DataS1/ATLANTIC-floverint_plant.csv", delim = ";") %>%
     janitor::clean_names() %>%
     dplyr::select(1:26) %>%

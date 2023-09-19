@@ -1,0 +1,59 @@
+---
+title: "atlantic_small_mammal_abundance - Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_small_mammal_abundance - Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- [`atlantic_small_mammal_abundance`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html)
+
+# Introduction
+
+The [`atlantic_small_mammal_abundance`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html) dataset contains 
+
+# Data exploration
+
+# Citations
+
+Figueiredo et al. 2017. Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns. *Ecology*, 98(11), 2981-2981. https://doi.org/10.1002/ecy.2005
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.2005
+
+# unzip
+unzip(zipfile = "data-raw/ecy2005-sup-0001-datas1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# import sites
+atlantic_small_mammal_abundance_sites <- readr::read_delim("data-raw/Localities.csv", delim = ";",
+                locale = readr::locale(encoding = "latin1")) %>%
+    janitor::clean_names() %>%
+    dplyr::relocate(longitude, .before = latitude)
+
+atlantic_small_mammal_abundance_species <- readr::read_delim("data-raw/Mammal_Communities.csv", delim = ";",
+                                                     locale = readr::locale(encoding = "latin1")) %>%
+    janitor::clean_names() %>%
+    dplyr::select(1:4)
+
+# join longer
+atlantic_small_mammal_abundance <- atlantic_small_mammal_abundance_sites %>%
+    dplyr::left_join(atlantic_small_mammal_abundance_species)
+```
