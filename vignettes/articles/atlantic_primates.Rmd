@@ -1,0 +1,62 @@
+---
+title: "atlantic_primates - ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_primates - ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- [`atlantic_primates`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html)
+
+# Introduction
+
+The [`atlantic_primates`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html) dataset contains 
+
+# Data exploration
+
+# Citations
+
+Culot et al. 2018. ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America. *Ecology*, 100(1), e02525. https://doi.org/10.1002/ecy.2525
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.2785
+
+# unzip
+unzip(zipfile = "data-raw/ecy2525-sup-0001-datas1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# fix data
+atlantic_primates_community <- readr::read_delim("data-raw/Dataset/ATLANTIC-PR_Community.csv",
+                                       delim = ";") %>%
+    janitor::clean_names()
+
+atlantic_primates_occurence <- readr::read_delim("data-raw/Dataset/ATLANTIC-PR_Occurrence.csv",
+                                                 delim = ";") %>%
+    janitor::clean_names() %>%
+    dplyr::select(1:33)
+
+atlantic_primates_quantitative <- readr::read_delim("data-raw/Dataset/ATLANTIC-PR_Quantitative.csv",
+                                                 delim = ";") %>%
+    janitor::clean_names()
+
+atlantic_primates_references <- readr::read_delim("data-raw/Dataset/ATLANTIC-PR_References.csv",
+                                                 delim = ";", locale = readr::locale(encoding = "latin1")) %>%
+    janitor::clean_names()
+```

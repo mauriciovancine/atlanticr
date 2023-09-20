@@ -29,6 +29,8 @@ navbar:
       href: articles/atlantic_mammal_traits.html
     - text: "atlantic_pollination - ATLANTIC POLLINATION: a data set of flowers and interaction with nectar-feeding vertebrates from the Atlantic Forest"
       href: articles/atlantic_pollination.html
+    - text: "atlantic_primates - ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America"
+      href: articles/atlantic_pollination.html
     - text: "atlantic_small_mammal_abundance - Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns"
       href: articles/atlantic_small_mammal_abundance.html
     - text: "atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America"
