@@ -40,6 +40,8 @@ individual Articles for data and source details.
   of South America
 - [`atlantic_birds`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html):
 - [`atlantic_camtraps`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html):
+  ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal
+  communities in the Atlantic Forest of South America
 - [`atlantic_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html):
   ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized
   mammals of the Atlantic Forest of South America

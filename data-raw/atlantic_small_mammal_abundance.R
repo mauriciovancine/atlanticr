@@ -7,7 +7,6 @@
 # packages
 library(tidyverse)
 library(janitor)
-library(fastDummies)
 
 # atlantic small mammal abundance ---------------------------------------
 

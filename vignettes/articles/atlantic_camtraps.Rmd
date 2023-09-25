@@ -1,0 +1,71 @@
+---
+title: "atlantic_camtraps - ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_camtraps - ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- [`atlantic_camtraps`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html)
+
+# Introduction
+
+The [`atlantic_camtraps`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html) dataset contains 
+
+# Data exploration
+
+# Citations
+
+Lima et al. 2017. ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America. *Ecology*, 98(11), 2979-2979. https://doi.org/10.1002/ecy.1998
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecy.1998
+
+# unzip
+unzip(zipfile = "data-raw/ecy1998-sup-0001-datas1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# import data
+atlantic_camtraps_location <- readr::read_csv("data-raw/ATLANTIC_CAMTRAPS_1-0_LOCATION.csv") %>%
+    janitor::clean_names()
+atlantic_camtraps_location
+
+atlantic_camtraps_survey <- readr::read_csv("data-raw/ATLANTIC_CAMTRAPS_1-0_SURVEY.csv") %>%
+    janitor::clean_names()
+atlantic_camtraps_survey
+
+atlantic_camtraps_species <- readr::read_csv("data-raw/ATLANTIC_CAMTRAPS_1-0_SPECIES.csv") %>%
+    janitor::clean_names()
+atlantic_camtraps_species
+
+atlantic_camtraps_records <- readr::read_csv("data-raw/ATLANTIC_CAMTRAPS_1-0_RECORDS.csv") %>%
+    janitor::clean_names()
+atlantic_camtraps_records
+
+# join data
+atlantic_camtraps_location_survey <- dplyr::left_join(atlantic_camtraps_location, atlantic_camtraps_survey)
+atlantic_camtraps_location_survey
+
+atlantic_camtraps_species_records <- dplyr::left_join(atlantic_camtraps_species, atlantic_camtraps_records)
+atlantic_camtraps_species_records
+
+atlantic_camtraps <- dplyr::left_join(atlantic_camtraps_location_survey, atlantic_camtraps_species_records)
+atlantic_camtraps
+```

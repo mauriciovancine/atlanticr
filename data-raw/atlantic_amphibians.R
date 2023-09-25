@@ -6,6 +6,7 @@
 
 # packages
 library(tidyverse)
+library(janitor)
 library(fastDummies)
 
 # atlantic amphibians ----------------------------------------------------
