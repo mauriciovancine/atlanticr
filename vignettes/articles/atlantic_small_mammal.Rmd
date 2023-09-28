@@ -1,0 +1,63 @@
+---
+title: "atlantic_small_mammal - Atlantic small-mammal: a dataset of communities of rodents and marsupials of the Atlantic forests of South America"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_small_mammal - Atlantic small-mammal: a dataset of communities of rodents and marsupials of the Atlantic forests of South America}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- [`atlantic_small_mammal`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html)
+
+# Introduction
+
+The [`atlantic_small_mammal`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html) dataset contains 
+
+# Data exploration
+
+# Citations
+
+Bovendorp et al. 2017. Atlantic small-mammal: a dataset of communities of rodents and marsupials of the Atlantic forests of South America. *Ecology*, 98(8), 2226-2226. https://doi.org/10.1002/ecy.1893
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.1893
+
+# unzip
+unzip(zipfile = "data-raw/ecy1893-sup-0002-datas1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# import
+atlantic_small_mammal_sites <- data.table::fread("data-raw/ATLANTIC_SM_Study_Site.csv", encoding = "Latin-1") %>%
+    tibble::as_tibble() %>%
+    janitor::clean_names()
+
+atlantic_small_mammal_species <- data.table::fread("data-raw/ATLANTIC_SM_Capture.csv", encoding = "Latin-1") %>%
+    tibble::as_tibble() %>%
+    janitor::clean_names()
+
+atlantic_small_mammal_references <- data.table::fread("data-raw/ATLANTIC_SM_Reference.csv", encoding = "Latin-1") %>%
+    tibble::as_tibble() %>%
+    janitor::clean_names() %>%
+    dplyr::mutate(reference_number = as.character(reference_number))
+
+# join
+atlantic_small_mammal <- atlantic_small_mammal_sites %>%
+    dplyr::left_join(atlantic_small_mammal_species) %>%
+    dplyr::left_join(atlantic_small_mammal_references)
+```

@@ -37,6 +37,7 @@
     <a class="dropdown-item" href="../articles/atlantic_mammal_traits.html">atlantic_mammal_traits - ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America</a>
     <a class="dropdown-item" href="../articles/atlantic_pollination.html">atlantic_pollination - ATLANTIC POLLINATION: a data set of flowers and interaction with nectar-feeding vertebrates from the Atlantic Forest</a>
     <a class="dropdown-item" href="../articles/atlantic_pollination.html">atlantic_primates - ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America</a>
+    <a class="dropdown-item" href="../articles/atlantic_small_mammal.html">atlantic_small_mammal - Atlantic small-mammal: a dataset of communities of rodents and marsupials of the Atlantic forests of South America</a>
     <a class="dropdown-item" href="../articles/atlantic_small_mammal_abundance.html">atlantic_small_mammal_abundance - Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns</a>
     <a class="dropdown-item" href="../articles/atlantic_spatial.html">atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America</a>
   </div>
@@ -130,17 +131,13 @@
 <span class="r-in"><span><span class="co"># import data</span></span></span>
 <span class="r-in"><span><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu">atlanticr</span><span class="fu">::</span><span class="fu">atlantic_spatial_download</span><span class="op">(</span>import <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
 <span class="r-in"><span>                                          path <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></span></span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>downloaded length 0 != reported length 0</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>cannot open URL 'https://drive.usercontent.google.com/download?id=1a00sNlhamU8ahtcB24WD6JXwQqz0RZbo&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=6ce139fc-2cad-419f-b382-ddb7f0c83e77&amp;at=APZUnTV_lMBu0WOUCQxJlbVLLurc:1694490404074': HTTP status was '404 Not Found'</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in download.file(url = "https://drive.usercontent.google.com/download?id=1a00sNlhamU8ahtcB24WD6JXwQqz0RZbo&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=6ce139fc-2cad-419f-b382-ddb7f0c83e77&amp;at=APZUnTV_lMBu0WOUCQxJlbVLLurc:1694490404074",     destfile = "atlantic_spatial_forest_vegetation_binary.tif",     mode = "wb"):</span> cannot open URL 'https://drive.usercontent.google.com/download?id=1a00sNlhamU8ahtcB24WD6JXwQqz0RZbo&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=6ce139fc-2cad-419f-b382-ddb7f0c83e77&amp;at=APZUnTV_lMBu0WOUCQxJlbVLLurc:1694490404074'</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># raster</span></span></span>
 <span class="r-in"><span><span class="va">r</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> class       : SpatRaster </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> dimensions  : 112663, 83307, 1  (nrow, ncol, nlyr)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> resolution  : 30, 30  (x, y)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> extent      : 4596570, 7095780, 7614240, 10994130  (xmin, xmax, ymin, ymax)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> coord. ref. : Conica_Equivalente_de_Albers_Brasil </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> source      : atlantic_spatial_forest_vegetation_binary.tif </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> color table : 1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> name        : mapbiomas_brazil_af_trinacional_2020_af_lim_forest_roads_rails </span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'r' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># delete</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/unlink.html" class="external-link">unlink</a></span><span class="op">(</span><span class="st">"atlantic_spatial_forest_vegetation_binary.tif"</span><span class="op">)</span></span></span>

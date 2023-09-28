@@ -50,6 +50,8 @@ individual Articles for data and source details.
   ATLANTIC-PRIMATES: a dataset of communities and occurrences of
   primates in the Atlantic Forests of South America
 - [`atlantic_small_mammal`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html):
+  Atlantic small-mammal: a dataset of communities of rodents and
+  marsupials of the Atlantic forests of South America
 - [`atlantic_small_mammal_abundance`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html):
   Abundance of small mammals in the Atlantic Forest (ASMAF): a data set
   for analyzing tropical community patterns
