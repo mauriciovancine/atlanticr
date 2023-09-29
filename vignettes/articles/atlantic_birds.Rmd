@@ -1,0 +1,60 @@
+---
+title: "atlantic_birds - ATLANTIC BIRDS: a data set of bird species from the Brazilian Atlantic Forest"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_birds - ATLANTIC BIRDS: a data set of bird species from the Brazilian Atlantic Forest}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- `atlantic_birds`
+
+# Introduction
+
+The `atlantic_birds` data set contains 
+
+# Data exploration
+
+# Citations
+
+Hassui et al. 2017. ATLANTIC BIRDS: a data set of bird species from the Brazilian Atlantic Forest. *Ecology*, 99(2), 497. https://doi.org/10.1002/ecy.2119
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.2119
+
+# unzip
+unzip(zipfile = "data-raw/ecy2119-sup-0002-datas1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# fix data
+atlantic_birds_qualitative <- readr::read_csv("data-raw/DataS1/DataS1/ATLANTIC_BIRDS_qualitative.csv") %>%
+    janitor::clean_names()
+
+atlantic_birds_quantitative <- readr::read_csv("data-raw/DataS1/DataS1/ATLANTIC_BIRDS_quantitative.csv") %>%
+    janitor::clean_names()
+
+atlantic_birds_species <- readr::read_csv("data-raw/DataS1/DataS1/ATLANTIC_birds_species.csv") %>%
+    janitor::clean_names()
+
+atlantic_birds_references <- readr::read_csv("data-raw/DataS1/DataS1/ATLANTIC_BIRDS_refs.csv") %>%
+    janitor::clean_names()
+
+# join
+atlantic_birds <- atlantic_birds_quantitative
+```

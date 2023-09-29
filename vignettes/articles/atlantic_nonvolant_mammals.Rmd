@@ -1,0 +1,76 @@
+---
+title: "atlantic_nonvolant_mammals - Non-volant mammals from the Upper Paraná River Basin: a data set from a critical region for conservation in Brazil"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atlantic_nonvolant_mammals - Non-volant mammals from the Upper Paraná River Basin: a data set from a critical region for conservation in Brazil}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Dataset used
+
+- [`atlantic_nonvolant_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html)
+
+# Introduction
+
+The [`atlantic_nonvolant_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html) dataset contains 
+
+# Data exploration
+
+# Citations
+
+Gonçalves et al. 2017. Non-volant mammals from the Upper Paraná River Basin: a data set from a critical region for conservation in Brazil. *Ecology*, 99(2), 499-499. https://doi.org/10.1002/ecy.2107
+
+# How we processed the raw data
+
+Download data from Ecology
+
+```{r eval=FALSE}
+#' ---
+#' title: "atlantic non-volant mammals data preparation"
+#' ---
+
+# prepare r -------------------------------------------------------------
+
+# packages
+library(tidyverse)
+library(janitor)
+
+# atlantic bats ---------------------------------------------------------
+
+# download
+# download data from https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecy.2107
+
+# unzip
+unzip(zipfile = "data-raw/ecy2107-sup-0002-datas1.zip", exdir = "data-raw")
+```
+
+Data cleaning
+```{r eval=FALSE}
+# import data
+atlantic_nonvolant_mammals_sites <- readr::read_csv("data-raw/Mammals_UPRB_study_sites.csv") %>%
+    janitor::clean_names() %>%
+    dplyr::mutate(site = as.character(site))
+
+atlantic_nonvolant_mammals_species <- readr::read_csv("data-raw/Mammals_UPRB_species.csv") %>%
+    janitor::clean_names() %>%
+    tidyr::pivot_longer(cols = -c(order, family, genus, species, frequency_of_occurrence, iucn_status, brazilian_status),
+                        names_to = "site", values_to = "incidence") %>%
+    dplyr::filter(incidence > 0) %>%
+    dplyr::select(-incidence) %>%
+    dplyr::mutate(site = stringr::str_replace_all(site, "site_", ""))
+
+atlantic_nonvolant_mammals_records <- readr::read_csv("data-raw/Mammals_UPRB_records.csv") %>%
+    janitor::clean_names()
+
+# join
+atlantic_nonvolant_mammals <- dplyr::left_join(atlantic_nonvolant_mammals_sites, atlantic_nonvolant_mammals_species) %>%
+    dplyr::left_join(atlantic_nonvolant_mammals_records)
+```

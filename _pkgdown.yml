@@ -13,6 +13,8 @@ navbar:
       href: articles/atlantic_ants.html
     - text: "atlantic_bats - ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America"
       href: articles/atlantic_bats.html
+    - text: "atlantic_birds - ATLANTIC BIRDS: a data set of bird species from the Brazilian Atlantic Forest"
+      href: articles/atlantic_birds.html
     - text: "atlantic_bird_traits - ATLANTIC BIRD TRAITS: a data set of bird morphological traits from the Atlantic forests of South America"
       href: articles/atlantic_bird_traits.html
     - text: "atlantic_butterflies - Atlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests"
@@ -29,6 +31,8 @@ navbar:
       href: articles/atlantic_mammals.html
     - text: "atlantic_mammal_traits - ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America"
       href: articles/atlantic_mammal_traits.html
+    - text: "atlantic_nonvolant_mammals - Non-volant mammals from the Upper Paraná River Basin: a data set from a critical region for conservation in Brazil"
+      href: articles/atlantic_nonvolant_mammals.html
     - text: "atlantic_pollination - ATLANTIC POLLINATION: a data set of flowers and interaction with nectar-feeding vertebrates from the Atlantic Forest"
       href: articles/atlantic_pollination.html
     - text: "atlantic_primates - ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America"
@@ -39,5 +43,3 @@ navbar:
       href: articles/atlantic_small_mammal_abundance.html
     - text: "atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America"
       href: articles/atlantic_spatial.html
-
-

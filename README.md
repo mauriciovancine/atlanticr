@@ -39,6 +39,8 @@ individual Articles for data and source details.
   ATLANTIC BATS: a data set of bat communities from the Atlantic Forests
   of South America
 - [`atlantic_birds`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html):
+  ATLANTIC BIRDS: a data set of bird species from the Brazilian Atlantic
+  Forest
 - [`atlantic_camtraps`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html):
   ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal
   communities in the Atlantic Forest of South America
@@ -46,6 +48,8 @@ individual Articles for data and source details.
   ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized
   mammals of the Atlantic Forest of South America
 - [`atlantic_nonvolant_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html):
+  Non-volant mammals from the Upper Paraná River Basin: a data set from
+  a critical region for conservation in Brazil
 - [`atlantic_primates`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html):
   ATLANTIC-PRIMATES: a dataset of communities and occurrences of
   primates in the Atlantic Forests of South America
