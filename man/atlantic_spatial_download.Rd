@@ -16,8 +16,6 @@ atlantic_spatial_download(metric, scale, edge_depth, gap_crossing, path = ".")
 \item{gap_crossing}{\cr}
 
 \item{path}{\cr}
-
-\item{import}{\cr}
 }
 \description{
 ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America
