@@ -5,22 +5,22 @@ articles:
   atlantic_amphibians: atlantic_amphibians.html
   atlantic_ants: atlantic_ants.html
   atlantic_bats: atlantic_bats.html
-  atlantic_bird_traits: atlantic_bird_traits.html
   atlantic_birds: atlantic_birds.html
+  atlantic_bird_traits: atlantic_bird_traits.html
   atlantic_butterflies: atlantic_butterflies.html
   atlantic_camtraps: atlantic_camtraps.html
   atlantic_epiphytes: atlantic_epiphytes.html
   atlantic_flower_invertebrate_interactions: atlantic_flower_invertebrate_interactions.html
   atlantic_frugivory: atlantic_frugivory.html
-  atlantic_mammal_traits: atlantic_mammal_traits.html
   atlantic_mammals: atlantic_mammals.html
+  atlantic_mammal_traits: atlantic_mammal_traits.html
   atlantic_nonvolant_mammals: atlantic_nonvolant_mammals.html
   atlantic_pollination: atlantic_pollination.html
   atlantic_primates: atlantic_primates.html
   atlantic_small_mammal: atlantic_small_mammal.html
   atlantic_small_mammal_abundance: atlantic_small_mammal_abundance.html
   atlantic_spatial: atlantic_spatial.html
-last_built: 2023-10-02T16:52Z
+last_built: 2023-10-02T23:41Z
 urls:
   reference: https://mauriciovancine.github.io/atlanticr/reference
   article: https://mauriciovancine.github.io/atlanticr/articles
