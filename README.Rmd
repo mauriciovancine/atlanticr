@@ -51,7 +51,7 @@ see individual Articles for data and source details.
 **Vertebrates**
 
 - [`atlantic_amphibians`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html): ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America
-- [`atlantic_bats`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_bats.html): ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America
+- [`atlantic_bats`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_bats.html) :bat: ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America
 - [`atlantic_birds`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html): ATLANTIC BIRDS: a data set of bird species from the Brazilian Atlantic Forest
 - [`atlantic_camtraps`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html): ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America
 - [`atlantic_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html): ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America
