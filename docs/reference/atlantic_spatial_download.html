@@ -71,14 +71,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">atlantic_spatial_download</span><span class="op">(</span></span>
-<span>  <span class="va">metric</span>,</span>
-<span>  <span class="va">scale</span>,</span>
-<span>  <span class="va">edge_depth</span>,</span>
-<span>  <span class="va">gap_crossing</span>,</span>
-<span>  import <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  path <span class="op">=</span> <span class="st">"."</span></span>
-<span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">atlantic_spatial_download</span><span class="op">(</span><span class="va">metric</span>, <span class="va">scale</span>, <span class="va">edge_depth</span>, <span class="va">gap_crossing</span>, path <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -99,11 +92,11 @@
 <dd><p><br></p></dd>
 
 
-<dt>import</dt>
+<dt>path</dt>
 <dd><p><br></p></dd>
 
 
-<dt>path</dt>
+<dt>import</dt>
 <dd><p><br></p></dd>
 
 </dl></div>
@@ -111,7 +104,6 @@
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mauriciovancine.github.io/atlanticr">atlanticr</a></span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rspatial.org/" class="external-link">terra</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># read table with metrics</span></span></span>
 <span class="r-in"><span><span class="va">atlantic_spatial</span></span></span>
@@ -131,18 +123,15 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 413 more rows</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># import data</span></span></span>
-<span class="r-in"><span><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu">atlanticr</span><span class="fu">::</span><span class="fu">atlantic_spatial_download</span><span class="op">(</span>import <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
-<span class="r-in"><span>                                          path <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>downloaded length 0 != reported length 0</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>cannot open URL 'https://drive.usercontent.google.com/download?id=1a00sNlhamU8ahtcB24WD6JXwQqz0RZbo&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=6ce139fc-2cad-419f-b382-ddb7f0c83e77&amp;at=APZUnTV_lMBu0WOUCQxJlbVLLurc:1694490404074': HTTP status was '404 Not Found'</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in download.file(url = "https://drive.usercontent.google.com/download?id=1a00sNlhamU8ahtcB24WD6JXwQqz0RZbo&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=6ce139fc-2cad-419f-b382-ddb7f0c83e77&amp;at=APZUnTV_lMBu0WOUCQxJlbVLLurc:1694490404074",     destfile = "atlantic_spatial_forest_vegetation_binary.tif",     mode = "wb"):</span> cannot open URL 'https://drive.usercontent.google.com/download?id=1a00sNlhamU8ahtcB24WD6JXwQqz0RZbo&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=6ce139fc-2cad-419f-b382-ddb7f0c83e77&amp;at=APZUnTV_lMBu0WOUCQxJlbVLLurc:1694490404074'</span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co"># raster</span></span></span>
-<span class="r-in"><span><span class="va">r</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'r' not found</span>
+<span class="r-in"><span><span class="fu">atlanticr</span><span class="fu">::</span><span class="fu">atlantic_spatial_download</span><span class="op">(</span>path <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Not logged in as any specific Google user.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> File downloaded:</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> • <span style="color: #00BBBB;">001_atlantic_spatial_all_classes.tif</span> <span style="color: #555555;">&lt;id: 1yPGzwXYy8bYqV5xl31W8iFCXJUdRufsF&gt;</span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Saved locally as:</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> • <span style="color: #0000BB;">001_atlantic_spatial_all_classes.tif</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># delete</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/unlink.html" class="external-link">unlink</a></span><span class="op">(</span><span class="st">"atlantic_spatial_forest_vegetation_binary.tif"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/unlink.html" class="external-link">unlink</a></span><span class="op">(</span><span class="st">"001_atlantic_spatial_all_classes.tif"</span><span class="op">)</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

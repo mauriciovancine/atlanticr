@@ -4,14 +4,7 @@
 \alias{atlantic_spatial_download}
 \title{Atlantic Spatial}
 \usage{
-atlantic_spatial_download(
-  metric,
-  scale,
-  edge_depth,
-  gap_crossing,
-  import = FALSE,
-  path = "."
-)
+atlantic_spatial_download(metric, scale, edge_depth, gap_crossing, path = ".")
 }
 \arguments{
 \item{metric}{\cr}
@@ -22,27 +15,22 @@ atlantic_spatial_download(
 
 \item{gap_crossing}{\cr}
 
-\item{import}{\cr}
-
 \item{path}{\cr}
+
+\item{import}{\cr}
 }
 \description{
 ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America
 }
 \examples{
 library(atlanticr)
-library(terra)
 
 # read table with metrics
 atlantic_spatial
 
 # import data
-r <- atlanticr::atlantic_spatial_download(import = TRUE,
-                                          path = ".")
-
-# raster
-r
+atlanticr::atlantic_spatial_download(path = ".")
 
 # delete
-unlink("atlantic_spatial_forest_vegetation_binary.tif")
+unlink("001_atlantic_spatial_all_classes.tif")
 }

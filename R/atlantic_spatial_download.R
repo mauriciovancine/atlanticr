@@ -17,7 +17,6 @@ atlantic_spatial_download <- function(metric,
                                       scale,
                                       edge_depth,
                                       gap_crossing,
-                                      import = FALSE,
                                       path = "."){
 
     # options
@@ -27,13 +26,10 @@ atlantic_spatial_download <- function(metric,
     setwd(path)
 
     # download
-    download.file(url = "https://drive.usercontent.google.com/download?id=1a00sNlhamU8ahtcB24WD6JXwQqz0RZbo&export=download&authuser=0&confirm=t&uuid=6ce139fc-2cad-419f-b382-ddb7f0c83e77&at=APZUnTV_lMBu0WOUCQxJlbVLLurc:1694490404074",
-                  destfile = "atlantic_spatial_forest_vegetation_binary.tif", mode = "wb")
-
-    # import
-    if(import){
-        r <- terra::rast("atlantic_spatial_forest_vegetation_binary.tif")
-        return(r)
-    }
+    googledrive::drive_deauth()
+    googledrive::drive_user()
+    file_id <- googledrive::as_id("1yPGzwXYy8bYqV5xl31W8iFCXJUdRufsF")
+    file <- googledrive::drive_get(file_id)
+    googledrive::drive_download(file)
 
 }

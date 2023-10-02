@@ -1,15 +1,10 @@
 library(atlanticr)
-library(terra)
 
 # read table with metrics
 atlantic_spatial
 
 # import data
-r <- atlanticr::atlantic_spatial_download(import = TRUE,
-                                          path = ".")
-
-# raster
-r
+atlanticr::atlantic_spatial_download(path = ".")
 
 # delete
-unlink("atlantic_spatial_forest_vegetation_binary.tif")
+unlink("001_atlantic_spatial_all_classes.tif")
