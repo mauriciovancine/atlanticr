@@ -4,6 +4,12 @@
     <loc>https://mauriciovancine.github.io/atlanticr/404.html</loc>
   </url>
   <url>
+    <loc>https://mauriciovancine.github.io/atlanticr/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://mauriciovancine.github.io/atlanticr/LICENSE.html</loc>
+  </url>
+  <url>
     <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_amphibians.html</loc>
   </url>
   <url>
@@ -13,10 +19,10 @@
     <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_bats.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_birds.html</loc>
+    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_bird_traits.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_bird_traits.html</loc>
+    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_birds.html</loc>
   </url>
   <url>
     <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_butterflies.html</loc>
@@ -37,10 +43,10 @@
     <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_frugivory.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_mammals.html</loc>
+    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_mammal_traits.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_mammal_traits.html</loc>
+    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_mammals.html</loc>
   </url>
   <url>
     <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_nonvolant_mammals.html</loc>
@@ -70,10 +76,10 @@
     <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_bats.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_birds.html</loc>
+    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_bird_traits.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_bird_traits.html</loc>
+    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_birds.html</loc>
   </url>
   <url>
     <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_butterflies.html</loc>
@@ -94,10 +100,10 @@
     <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_frugivory.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_mammals.html</loc>
+    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_mammal_traits.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_mammal_traits.html</loc>
+    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_mammals.html</loc>
   </url>
   <url>
     <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_nonvolant_mammals.html</loc>
@@ -127,12 +133,6 @@
     <loc>https://mauriciovancine.github.io/atlanticr/index.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/LICENSE.html</loc>
-  </url>
-  <url>
     <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html</loc>
   </url>
   <url>
@@ -142,10 +142,10 @@
     <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_bats.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html</loc>
+    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html</loc>
+    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html</loc>
   </url>
   <url>
     <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_butterflies.html</loc>
@@ -163,10 +163,10 @@
     <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html</loc>
+    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html</loc>
   </url>
   <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html</loc>
+    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html</loc>
   </url>
   <url>
     <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html</loc>

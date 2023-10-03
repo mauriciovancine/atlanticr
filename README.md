@@ -6,7 +6,7 @@ South America used to have one of the largest forests in the world – the
 Atlantic Forest – with more than 1.6 million km² spanning Brazil,
 Argentina, and Paraguay. The
 [ATLANTIC](https://esajournals.onlinelibrary.wiley.com/doi/toc/10.1002/(ISSN)1939-9170.AtlanticPapers)
-includes a series of Data Papers about the community composition,  
+includes a series of Data Papers about the community composition,
 distribution of plants and animals, and environmental characteristics
 from the Atlantic Forest. These papers are a fundamental tool for both
 scientists and policy makers.
@@ -67,7 +67,7 @@ individual Articles for data and source details.
   :bird::straight_ruler: ATLANTIC BIRD TRAITS: a data set of bird
   morphological traits from the Atlantic forests of South America
 - [`atlantic_mammal_traits`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html)
-  :straight_ruler::bat: ATLANTIC MAMMAL TRAITS: a data set of
+  :bat::straight_ruler: ATLANTIC MAMMAL TRAITS: a data set of
   morphological traits of mammals in the Atlantic Forest of South
   America
 
@@ -85,8 +85,8 @@ individual Articles for data and source details.
 - [`atlantic_frugivory`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html)
   :bird::cherries: Atlantic frugivory: a plant–frugivore interaction
   data set for the Atlantic Forest
-- [`atlantic_pollination`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html):
-  ATLANTIC POLLINATION :bird::hibiscus: a data set of flowers and
+- [`atlantic_pollination`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html)
+  :bird::hibiscus: ATLANTIC POLLINATION: a data set of flowers and
   interaction with nectar-feeding vertebrates from the Atlantic Forest
 - [`atlantic_flower_invertebrate_interactions`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_flower_invertebrate_interactions.html)
   :bee::white_flower: Atlantic flower–invertebrate interactions: A data
@@ -101,7 +101,7 @@ individual Articles for data and source details.
 **Spatial**
 
 - [`atlantic_spatial`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html)
-  :globe_with_meridians: ATLANTIC SPATIAL: a dataset of landscape,
+  :earth_americas: ATLANTIC SPATIAL: a dataset of landscape,
   topographic, hydrologic and anthropogenic metrics for the Atlantic
   Forests of South America
 
