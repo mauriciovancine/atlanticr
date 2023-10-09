@@ -41,5 +41,5 @@ navbar:
       href: articles/atlantic_small_mammal.html
     - text: "atlantic_small_mammal_abundance - Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns"
       href: articles/atlantic_small_mammal_abundance.html
-    - text: "atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America"
+    - text: "atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest"
       href: articles/atlantic_spatial.html

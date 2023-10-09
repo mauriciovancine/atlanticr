@@ -41,7 +41,7 @@
     <a class="dropdown-item" href="../articles/atlantic_pollination.html">atlantic_primates - ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America</a>
     <a class="dropdown-item" href="../articles/atlantic_small_mammal.html">atlantic_small_mammal - Atlantic small-mammal: a dataset of communities of rodents and marsupials of the Atlantic forests of South America</a>
     <a class="dropdown-item" href="../articles/atlantic_small_mammal_abundance.html">atlantic_small_mammal_abundance - Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns</a>
-    <a class="dropdown-item" href="../articles/atlantic_spatial.html">atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America</a>
+    <a class="dropdown-item" href="../articles/atlantic_spatial.html">atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest</a>
   </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
@@ -71,7 +71,18 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">atlantic_spatial_download</span><span class="op">(</span><span class="va">metric</span>, <span class="va">scale</span>, <span class="va">edge_depth</span>, <span class="va">gap_crossing</span>, path <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">atlantic_spatial_download</span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  metric <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  metric_group <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  metric_type <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  lulc_class <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  edge_depth <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  gap_crossing <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  scale <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  resolution <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  path <span class="op">=</span> <span class="st">"."</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -80,7 +91,15 @@
 <dd><p><br></p></dd>
 
 
-<dt>scale</dt>
+<dt>metric_group</dt>
+<dd><p><br></p></dd>
+
+
+<dt>metric_type</dt>
+<dd><p><br></p></dd>
+
+
+<dt>lulc_class</dt>
 <dd><p><br></p></dd>
 
 
@@ -92,7 +111,19 @@
 <dd><p><br></p></dd>
 
 
+<dt>scale</dt>
+<dd><p><br></p></dd>
+
+
+<dt>resolution</dt>
+<dd><p><br></p></dd>
+
+
 <dt>path</dt>
+<dd><p><br></p></dd>
+
+
+<dt>cores</dt>
 <dd><p><br></p></dd>
 
 </dl></div>
@@ -103,27 +134,30 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># read table with metrics</span></span></span>
 <span class="r-in"><span><span class="va">atlantic_spatial</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 423 × 7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     done exported file_atlantic            type  description values resolution_m</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>     1        1 atlantic_spatial_roads_… anth… roads bina… 0 and…           30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>     0        1 atlantic_spatial_roads_… anth… roads eucl… dista…           30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>     1        1 atlantic_spatial_railwa… anth… railways b… 0 and…           30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>     1        1 atlantic_spatial_railwa… anth… railways e… dista…           30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>     1        1 atlantic_spatial_roads_… anth… roads and … 0 and…           30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>     1        1 atlantic_spatial_roads_… anth… roads and … dista…           30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>     1        1 atlantic_spatial_indige… anth… indigenous… 0 and…           30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>     1        1 atlantic_spatial_indige… anth… indigenous… dista…           30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>     1        1 atlantic_spatial_protec… anth… protected … 0 and…           30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>     1        1 atlantic_spatial_protec… anth… protected … dista…           30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 413 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 502 × 18</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    id    metric                metric_group metric_type metric_description value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 001   atlantic_spatial_all… landscape    lulc        all land cover an… 3; 4…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 002   atlantic_spatial_gro… landscape    lulc        grouped land cove… 1 to…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 003   atlantic_spatial_for… landscape    habitat_bi… forest vegetation… 0 an…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 004   atlantic_spatial_nat… landscape    habitat_bi… natural vegetatio… 0 an…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 005   atlantic_spatial_for… landscape    fragment_id forest vegetation… 1 to…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 006   atlantic_spatial_for… landscape    fragment_a… forest vegetation… 0.09…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 007   atlantic_spatial_nat… landscape    fragment_id natural vegetatio… 1 to…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 008   atlantic_spatial_nat… landscape    fragment_a… natural vegetatio… 0.09…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 009   atlantic_spatial_for… landscape    fragment_p… forest vegetation… 0 to…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 010   atlantic_spatial_for… landscape    fragment_p… forest vegetation… 0 to…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 492 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 12 more variables: value_description &lt;chr&gt;, unit &lt;chr&gt;, lulc_class &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   edge_depth_m &lt;dbl&gt;, gap_crossing_m &lt;dbl&gt;, scale_buffer_radius_m &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   resolution &lt;dbl&gt;, file_name &lt;chr&gt;, file_id_drive_tif &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   link_drive_tif &lt;chr&gt;, file_id_drive_tfw &lt;chr&gt;, link_drive_tfw &lt;chr&gt;</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># import data</span></span></span>
 <span class="r-in"><span><span class="fu">atlanticr</span><span class="fu">::</span><span class="fu">atlantic_spatial_download</span><span class="op">(</span>path <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> File downloaded:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> • <span style="color: #00BBBB;">001_atlantic_spatial_all_classes.tif</span> <span style="color: #555555;">&lt;id: 1yPGzwXYy8bYqV5xl31W8iFCXJUdRufsF&gt;</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Saved locally as:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> • <span style="color: #0000BB;">001_atlantic_spatial_all_classes.tif</span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in map(as_id(id), get_one_file_id):</span> <span style="color: #00BBBB;">ℹ</span> In index: 1.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Caused by error in `.f()`:</span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">!</span> Can't `drive_get()` a file when `id` is `NA`.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># delete</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/unlink.html" class="external-link">unlink</a></span><span class="op">(</span><span class="st">"001_atlantic_spatial_all_classes.tif"</span><span class="op">)</span></span></span>

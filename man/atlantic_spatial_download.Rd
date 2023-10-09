@@ -4,18 +4,39 @@
 \alias{atlantic_spatial_download}
 \title{Atlantic Spatial}
 \usage{
-atlantic_spatial_download(metric, scale, edge_depth, gap_crossing, path = ".")
+atlantic_spatial_download(
+  id = NULL,
+  metric = NULL,
+  metric_group = NULL,
+  metric_type = NULL,
+  lulc_class = NULL,
+  edge_depth = NULL,
+  gap_crossing = NULL,
+  scale = NULL,
+  resolution = NULL,
+  path = "."
+)
 }
 \arguments{
 \item{metric}{\cr}
 
-\item{scale}{\cr}
+\item{metric_group}{\cr}
+
+\item{metric_type}{\cr}
+
+\item{lulc_class}{\cr}
 
 \item{edge_depth}{\cr}
 
 \item{gap_crossing}{\cr}
 
+\item{scale}{\cr}
+
+\item{resolution}{\cr}
+
 \item{path}{\cr}
+
+\item{cores}{\cr}
 }
 \description{
 ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America

@@ -1,6 +1,6 @@
 #' Atlantic Spatial
 #'
-#' ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America
+#' ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest
 #'
 #' @format A tibble with 500 rows and 10 variables:
 #' \describe{
@@ -14,6 +14,6 @@
 #'   \item{file}{file}
 #'   \item{link}{link}
 #'   }
-#' @source {Vancine et al. ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America. Ecology.}
+#' @source {Vancine et al. ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest. Ecology.}
 #' \doi{in prep.}
 "atlantic_spatial"

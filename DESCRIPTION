@@ -16,5 +16,7 @@ BugReports: https://github.com/mauriciovancine/atlanticr/issues
 Config/Needs/website: rmarkdown
 Depends: 
     R (>= 2.10),
+    dplyr,
+    magrittr,
     googledrive
 LazyData: true

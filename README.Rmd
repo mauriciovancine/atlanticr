@@ -72,7 +72,7 @@ Dataset currently included in the package are summarized below; see individual A
 
 **Spatial**
 
-- [`atlantic_spatial`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html) :earth_americas: ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America
+- [`atlantic_spatial`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html) :earth_americas: ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest
 
 ## How to provide feedback
 

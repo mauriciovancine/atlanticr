@@ -103,7 +103,7 @@ individual Articles for data and source details.
 - [`atlantic_spatial`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html)
   :earth_americas: ATLANTIC SPATIAL: a dataset of landscape,
   topographic, hydrologic and anthropogenic metrics for the Atlantic
-  Forests of South America
+  Forest
 
 ## How to provide feedback
 
