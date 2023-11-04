@@ -48,8 +48,8 @@ library(atlanticr)
 atlantic_spatial
 
 # import data
-atlanticr::atlantic_spatial_download(path = ".")
+atlanticr::atlantic_spatial_download(id = "003", path = ".")
 
 # delete
-unlink("001_atlantic_spatial_all_classes.tif")
+unlink("003_atlantic_spatial_forest_vegetation_binary*")
 }
