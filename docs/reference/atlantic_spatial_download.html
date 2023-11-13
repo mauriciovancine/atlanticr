@@ -81,6 +81,7 @@
 <span>  gap_crossing <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  scale <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  resolution <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  cores <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  path <span class="op">=</span> <span class="st">"."</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -119,11 +120,11 @@
 <dd><p><br></p></dd>
 
 
-<dt>path</dt>
+<dt>cores</dt>
 <dd><p><br></p></dd>
 
 
-<dt>cores</dt>
+<dt>path</dt>
 <dd><p><br></p></dd>
 
 </dl></div>
@@ -150,22 +151,12 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 491 more rows</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 14 more variables: value_description &lt;chr&gt;, unit &lt;chr&gt;, lulc_class &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   edge_depth_m &lt;dbl&gt;, gap_crossing_m &lt;dbl&gt;, scale_buffer_radius_m &lt;dbl&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   resolution &lt;dbl&gt;, file_name &lt;chr&gt;, file_id_drive_tif &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   link_drive_tif &lt;chr&gt;, file_id_drive_tfw &lt;chr&gt;, link_drive_tfw &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   file_id_drive_gpkg &lt;chr&gt;, link_drive_gpkg &lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   resolution &lt;dbl&gt;, file_name &lt;chr&gt;, link_drive_tif &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   link_drive_tfw &lt;chr&gt;, link_drive_gpkg &lt;chr&gt;, link_osf_tif &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   link_osf_tfw &lt;chr&gt;, link_osf_gpkg &lt;chr&gt;</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># import data</span></span></span>
 <span class="r-in"><span><span class="fu">atlanticr</span><span class="fu">::</span><span class="fu">atlantic_spatial_download</span><span class="op">(</span>id <span class="op">=</span> <span class="fl">3</span>, path <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> File downloaded:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> • <span style="color: #00BBBB;">003_atlantic_spatial_forest_vegetation_binary.tif</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   <span style="color: #555555;">&lt;id: 1qOhE57moNwHa6FcRng-28vNeYIq9bR7S&gt;</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Saved locally as:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> • <span style="color: #0000BB;">003_atlantic_spatial_forest_vegetation_binary.tif</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> File downloaded:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> • <span style="color: #00BBBB;">003_atlantic_spatial_forest_vegetation_binary.tfw</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   <span style="color: #555555;">&lt;id: 1ilQ4GJU1bzuourXiPvMyGOcYLXZHdWfd&gt;</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Saved locally as:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> • <span style="color: #0000BB;">003_atlantic_spatial_forest_vegetation_binary.tfw</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># delete</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/unlink.html" class="external-link">unlink</a></span><span class="op">(</span><span class="st">"003_atlantic_spatial_forest_vegetation_binary*"</span><span class="op">)</span></span></span>

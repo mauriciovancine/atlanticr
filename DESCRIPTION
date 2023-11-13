@@ -18,5 +18,7 @@ Depends:
     R (>= 2.10),
     dplyr,
     magrittr,
-    googledrive
+    foreach,
+    parallelly,
+    doParallel
 LazyData: true

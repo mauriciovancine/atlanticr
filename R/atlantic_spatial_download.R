@@ -26,6 +26,7 @@ atlantic_spatial_download <- function(id = NULL,
                                       gap_crossing = NULL,
                                       scale = NULL,
                                       resolution = NULL,
+                                      cores = 1,
                                       path = "."){
 
     # options
@@ -60,21 +61,26 @@ atlantic_spatial_download <- function(id = NULL,
     #                   scale %in% scale_filter |
     #                   resolution %in% resolution_filter)
 
-    # file id drive
-    file_id_drive_tif <- dplyr::pull(atlantic_spatial_download_filter, file_id_drive_tif)
-    file_id_drive_tfw <- dplyr::pull(atlantic_spatial_download_filter, file_id_drive_tfw)
-    file_id_drive <- c(file_id_drive_tif, file_id_drive_tfw)
+    # prepare data
+    atlantic_spatial_download_filter_download <- atlantic_spatial_download_filter %>%
+        dplyr::select(file_name, link_osf_tif, link_osf_tfw) %>%
+        tidyr::pivot_longer(cols = -file_name, names_to = "destfile", values_to = "url") %>%
+        dplyr::mutate(destfile = stringr::str_replace_all(destfile, "link_osf_", "."),
+                      destfile = paste0(file_name, destfile))
+    atlantic_spatial_download_filter_download
 
     # download
-    googledrive::drive_deauth()
-    file_id <- googledrive::as_id(file_id_drive)
-    file <- googledrive::drive_get(file_id)
+    doParallel::registerDoParallel(parallelly::availableCores(omit = 2))
 
-    # download
-    for(i in 1:nrow(file)){
+    foreach::foreach(i=1:nrow(atlantic_spatial_download_filter_download)) %dopar% {
 
-        googledrive::drive_download(file[i, ]$id, overwrite = TRUE)
+        url <- atlantic_spatial_download_filter_download[i, ]$url
+        destfile <- atlantic_spatial_download_filter_download[i, ]$destfile
+
+        download.file(url = url, destfile = destfile, mode = "wb")
 
     }
+
+    doParallel::stopImplicitCluster()
 
 }

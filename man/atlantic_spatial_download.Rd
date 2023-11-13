@@ -14,6 +14,7 @@ atlantic_spatial_download(
   gap_crossing = NULL,
   scale = NULL,
   resolution = NULL,
+  cores = 1,
   path = "."
 )
 }
@@ -34,9 +35,9 @@ atlantic_spatial_download(
 
 \item{resolution}{\cr}
 
-\item{path}{\cr}
-
 \item{cores}{\cr}
+
+\item{path}{\cr}
 }
 \description{
 ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America
