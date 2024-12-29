@@ -1,9 +1,17 @@
 Package: atlanticr
 Title: provides data from the ATLANTIC SERIES
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R: c(
     person("Maurício Humberto", "Vancine", email = "mauricio.vancine@gmail.com",
-        role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9650-7575"))
+        role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9650-7575")),
+    person("Bernardo", "Niebuhr", email = "bernardo_brandaum@yahoo.com.br",
+        role = c("aut"), comment = c(ORCID = "0000-0002-0453-315X")),
+    person("Renata L.", "Muylaert", email = "renatamuy@gmail.com",
+        role = c("aut"), comment = c(ORCID = "0000-0002-6466-6210")),
+    person("Mauro", "Galetti", email = "mauro.galetti@unesp.br",
+        role = c("aut"), comment = c(ORCID = "0000-0002-8187-8696")),
+    person("Milton Cezar", "Ribeiro", email = "milton.c.ribeiro@unesp.br",
+        role = c("aut"), comment = c(ORCID = "0000-0002-4312-202X")))
 Maintainer: Maurício Humberto Vancine <mauricio.vancine@gmail.com>
 Description: Provides data from the ATLANTIC SERIES, data papers from Atlantic Forest
 License: MIT + file LICENSE
@@ -14,7 +22,7 @@ URL: https://mauriciovancine.github.io/atlanticr
 BugReports: https://github.com/mauriciovancine/atlanticr/issues
 Config/Needs/website: rmarkdown
 Depends: 
-    R (>= 3.5),
+    R (>= 4.0),
     dplyr,
     magrittr,
     foreach,
