@@ -4,8 +4,8 @@
 The tropical and subtropical forests along the coast and interior of
 South America used to have one of the largest forests in the world – the
 Atlantic Forest – with more than 1.6 million km² spanning Brazil,
-Argentina, and Paraguay. The
-[ATLANTIC](https://esajournals.onlinelibrary.wiley.com/doi/toc/10.1002/(ISSN)1939-9170.AtlanticPapers)
+Argentina, and Paraguay. The [ATLANTIC: Data Papers from a biodiversity
+hotspot](https://esajournals.onlinelibrary.wiley.com/doi/toc/10.1002/(ISSN)1939-9170.AtlanticPapers)
 includes a series of Data Papers about the community composition,
 distribution of plants and animals, and environmental characteristics
 from the Atlantic Forest. These papers are a fundamental tool for both

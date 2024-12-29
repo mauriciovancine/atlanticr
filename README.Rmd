@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 # atlanticr <a href='https://lter.github.io/atlanticr/'><img src="hexagon/logo.png" id="home_logo" align="right" height="180"/></a>
 
-The tropical and subtropical forests along the coast and interior of South America used to have one of the largest forests in the world – the Atlantic Forest – with more than 1.6 million km² spanning Brazil, Argentina, and Paraguay. The [ATLANTIC](https://esajournals.onlinelibrary.wiley.com/doi/toc/10.1002/(ISSN)1939-9170.AtlanticPapers) includes a series of Data Papers about the community composition, distribution of plants and animals, and environmental characteristics from the Atlantic Forest. These papers are a fundamental tool for both scientists and policy makers.
+The tropical and subtropical forests along the coast and interior of South America used to have one of the largest forests in the world – the Atlantic Forest – with more than 1.6 million km² spanning Brazil, Argentina, and Paraguay. The [ATLANTIC: Data Papers from a biodiversity hotspot](https://esajournals.onlinelibrary.wiley.com/doi/toc/10.1002/(ISSN)1939-9170.AtlanticPapers) includes a series of Data Papers about the community composition, distribution of plants and animals, and environmental characteristics from the Atlantic Forest. These papers are a fundamental tool for both scientists and policy makers.
 
 The goal of this package is to provide data from the ATLANTIC, a series of data papers by Ecology on biodiversity data from the Atlantic 
 Forest. Currently, there are 17 data sets: nine about vertebrates, two about vertebrate traits, two about invertebrates, three about interactions animal-plant, one about plant, and one about spatial data.

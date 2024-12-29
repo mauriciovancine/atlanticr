@@ -9,7 +9,7 @@ Description: Provides data from the ATLANTIC SERIES, data papers from Atlantic F
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 URL: https://mauriciovancine.github.io/atlanticr
 BugReports: https://github.com/mauriciovancine/atlanticr/issues
 Config/Needs/website: rmarkdown

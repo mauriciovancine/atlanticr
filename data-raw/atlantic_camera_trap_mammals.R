@@ -24,12 +24,12 @@ download.file(url = "https://figshare.com/ndownloader/files/41311503",
 atlantic_camera_trap_mammals_surveys <- readr::read_delim("data-raw/DATASET_CAMTRAP_SURVEYS_ATLANTICFOREST.csv", delim = ";")
 atlantic_camera_trap_mammals_surveys
 
-atlantic_camera_trap_mammals_records <- readr::read_delim("data-raw/DATASET_CAMTRAP_RECORDS_ATLANTICFOREST.csv", delim = ";")
-atlantic_camera_trap_mammals_records
+atlantic_camera_trap_mammals <- readr::read_delim("data-raw/DATASET_CAMTRAP_RECORDS_ATLANTICFOREST.csv", delim = ";")
+atlantic_camera_trap_mammals
 
 # save data
 usethis::use_data(atlantic_camera_trap_mammals_surveys, overwrite = TRUE)
-usethis::use_data(atlantic_camera_trap_mammals_records, overwrite = TRUE)
+usethis::use_data(atlantic_camera_trap_mammals, overwrite = TRUE)
 
 # delete files
 unlink("data-raw/DATASET_CAMTRAP_RECORDS_ATLANTICFOREST.csv")

@@ -40,7 +40,7 @@ atlantic_spatial_download(
 \item{path}{\cr}
 }
 \description{
-ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America
+ATLANTIC SPATIAL: a data set of landscape, topographic, hydrological, and anthropogenic metrics for the Atlantic Forest
 }
 \examples{
 library(atlanticr)
