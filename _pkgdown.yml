@@ -21,6 +21,8 @@ navbar:
       href: articles/atlantic_butterflies.html
     - text: "atlantic_camtraps - ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America"
       href: articles/atlantic_camtraps.html
+    - text: "atlantic_camera_trap_mammals - Camera trap surveys of Atlantic Forest mammals: A data set for analyses considering imperfect detection (2004–2020)"
+      href: articles/atlantic_camera_trap_mammals.html
     - text: "atlantic_epiphytes - ATLANTIC EPIPHYTES: a data set of vascular and non-vascular epiphyte plants and lichens from the Atlantic Forest"
       href: articles/atlantic_epiphytes.html
     - text: "atlantic_flower_invertebrate_interactions - Atlantic flower–invertebrate interactions: A data set of occurrence and frequency of floral visits"
@@ -41,5 +43,5 @@ navbar:
       href: articles/atlantic_small_mammal.html
     - text: "atlantic_small_mammal_abundance - Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns"
       href: articles/atlantic_small_mammal_abundance.html
-    - text: "atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest"
+    - text: "atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrological and anthropogenic metrics for the Atlantic Forest"
       href: articles/atlantic_spatial.html

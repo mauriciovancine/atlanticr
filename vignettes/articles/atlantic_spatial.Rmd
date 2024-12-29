@@ -1,8 +1,8 @@
 ---
-title: "atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest"
+title: "atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrological and anthropogenic metrics for the Atlantic Forest"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest}
+  %\VignetteIndexEntry{atlantic_spatial - ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrological and anthropogenic metrics for the Atlantic Forest}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -27,6 +27,6 @@ The `atlantic_spatial` data set contains
 
 # Citations
 
-Vancine et al. ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest. *Ecology*
+Vancine et al. ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrological and anthropogenic metrics for the Atlantic Forest. *Ecology*
 
 # How we processed the raw data

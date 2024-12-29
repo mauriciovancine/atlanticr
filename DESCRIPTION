@@ -1,12 +1,11 @@
 Package: atlanticr
-Title: provides data from the ATLANTIC
+Title: provides data from the ATLANTIC SERIES
 Version: 0.0.0.9000
 Authors@R: 
     person("Maurício Humberto", "Vancine", email = "mauricio.vancine@gmail.com",
         role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9650-7575"))
 Maintainer: Maurício Humberto Vancine <mauricio.vancine@gmail.com>
-Description: Provides data from the ATLANTIC, data papers from Atlantic Forest,
-             a biodiversity hotspot 
+Description: Provides data from the ATLANTIC SERIES, data papers from Atlantic Forest
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -15,7 +14,7 @@ URL: https://mauriciovancine.github.io/atlanticr
 BugReports: https://github.com/mauriciovancine/atlanticr/issues
 Config/Needs/website: rmarkdown
 Depends: 
-    R (>= 2.10),
+    R (>= 3.5),
     dplyr,
     magrittr,
     foreach,

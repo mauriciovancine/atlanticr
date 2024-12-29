@@ -1,195 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/404.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_amphibians.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_ants.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_bats.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_bird_traits.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_birds.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_butterflies.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_camtraps.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_epiphytes.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_epyphites.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_flower_invertebrate_interactions.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_frugivory.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_mammal_traits.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_mammals.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_nonvolant_mammals.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_pollination.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_primates.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_small_mammal.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_small_mammal_abundance.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/articles/atlantic_spatial.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_amphibians.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_ants.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_bats.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_bird_traits.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_birds.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_butterflies.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_camtraps.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_epiphytes.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_epyphites.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_flower_invertebrate_interactions.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_frugivory.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_mammal_traits.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_mammals.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_nonvolant_mammals.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_pollination.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_primates.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_small_mammal.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_small_mammal_abundance.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_spatial.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_ants.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_bats.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_butterflies.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_epiphytes.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_flower_invertebrate_interactions.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial_download.html</loc>
-  </url>
-  <url>
-    <loc>https://mauriciovancine.github.io/atlanticr/reference/index.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://mauriciovancine.github.io/atlanticr/404.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/LICENSE-text.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/LICENSE.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_amphibians.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_ants.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_bats.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_bird_traits.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_birds.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_butterflies.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_camera_trap_mammals.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_camtraps.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_epiphytes.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_flower_invertebrate_interactions.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_frugivory.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_mammal_traits.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_mammals.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_nonvolant_mammals.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_pollination.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_primates.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_small_mammal.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_small_mammal_abundance.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/atlantic_spatial.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/articles/index.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/authors.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/index.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_ants.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_bats.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_butterflies.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_epiphytes.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_flower_invertebrate_interactions.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial_download.html</loc></url>
+<url><loc>https://mauriciovancine.github.io/atlanticr/reference/index.html</loc></url>
 </urlset>
+

@@ -22,13 +22,13 @@ animal-plant, one about plant, and one about spatial data.
 You can install the development version of `atlanticr` from GitHub with:
 
 ``` r
-# install.packages("pak")
-pak::pkg_install("mauriciovancine/atlanticr")
+# install.packages("remotes")
+remotes::install_github("mauriciovancine/atlanticr")
 ```
 
-## Datasets
+## Data sets
 
-Dataset currently included in the package are summarized below; see
+Data set currently included in the package are summarized below; see
 individual Articles for data and source details.
 
 **Vertebrates**
@@ -45,6 +45,9 @@ individual Articles for data and source details.
 - [`atlantic_camtraps`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html)
   :camera_flash: ATLANTIC-CAMTRAPS: a dataset of medium and large
   terrestrial mammal communities in the Atlantic Forest of South America
+- [`atlantic_camera_trap_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_camera_trap_mammals.html)
+  :camera_flash: :cat: Camera trap surveys of Atlantic Forest mammals: A
+  data set for analyses considering imperfect detection (2004–2020)
 - [`atlantic_mammals`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html)
   :cat: ATLANTIC MAMMALS: a data set of assemblages of medium- and
   large-sized mammals of the Atlantic Forest of South America
@@ -101,8 +104,8 @@ individual Articles for data and source details.
 **Spatial**
 
 - [`atlantic_spatial`](https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html)
-  :earth_americas: ATLANTIC SPATIAL: a dataset of landscape,
-  topographic, hydrologic and anthropogenic metrics for the Atlantic
+  :earth_americas: ATLANTIC SPATIAL: a data set of landscape,
+  topographic, hydrological, and anthropogenic metrics for the Atlantic
   Forest
 
 ## How to provide feedback

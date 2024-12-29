@@ -1,6 +1,6 @@
 #' Atlantic Spatial
 #'
-#' ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forests of South America
+#' ATLANTIC SPATIAL: a data set of landscape, topographic, hydrological, and anthropogenic metrics for the Atlantic Forest
 #'
 #' @param metric \cr
 #' @param metric_group  \cr
