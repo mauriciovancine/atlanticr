@@ -125,7 +125,7 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># read table with metrics</span></span></span>
 <span class="r-in"><span><span class="va">atlantic_spatial</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 503 × 18</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 503 × 19</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       id metric                metric_group metric_type metric_description value</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>     0 atlantic_spatial_del… <span style="color: #BB0000;">NA</span>           <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>                 <span style="color: #BB0000;">NA</span>   </span>
@@ -139,15 +139,15 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>     8 atlantic_spatial_nat… landscape    fragment_a… natural vegetatio… 0.09…</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>     9 atlantic_spatial_for… landscape    fragment_p… forest vegetation… 0 to…</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 493 more rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 12 more variables: value_description &lt;chr&gt;, unit &lt;chr&gt;, lulc_class &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 13 more variables: value_description &lt;chr&gt;, unit &lt;chr&gt;, lulc_class &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   edge_depth_m &lt;dbl&gt;, gap_crossing_m &lt;dbl&gt;, scale_buffer_radius_m &lt;dbl&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   resolution &lt;dbl&gt;, file_name &lt;chr&gt;, link_zenodo_tif &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   link_zenodo_tfw &lt;chr&gt;, link_zenodo_gpkg &lt;chr&gt;, doi &lt;lgl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   resolution &lt;dbl&gt;, file_name &lt;chr&gt;, file_size_gb &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   zenodo_repository &lt;chr&gt;, zenodo_link_main &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   zenodo_link_auxiliary &lt;chr&gt;, zenodo_doi &lt;chr&gt;</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># import data</span></span></span>
 <span class="r-in"><span><span class="fu">atlanticr</span><span class="fu">::</span><span class="fu">atlantic_spatial_download</span><span class="op">(</span>id <span class="op">=</span> <span class="fl">3</span>, path <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in dplyr::select(., file_name, link_osf_tif, link_osf_tfw):</span> Can't select columns that don't exist.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #BB0000;">✖</span> Column `link_osf_tif` doesn't exist.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Starting downloadDownload completed</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># delete</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/unlink.html" class="external-link">unlink</a></span><span class="op">(</span><span class="st">"003_atlantic_spatial_forest_vegetation_binary*"</span><span class="op">)</span></span></span>

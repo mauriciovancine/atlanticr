@@ -17,22 +17,24 @@
 #'
 #' @name atlantic_spatial_download
 #' @export
-atlantic_spatial_download <- function(id = NULL,
-                                      metric = NULL,
-                                      metric_group = NULL,
-                                      metric_type = NULL,
-                                      lulc_class = NULL,
-                                      edge_depth = NULL,
-                                      gap_crossing = NULL,
-                                      scale = NULL,
-                                      resolution = NULL,
-                                      cores = 1,
-                                      path = "."){
+atlantic_spatial_download <- function(
+        id = NULL,
+        metric = NULL,
+        metric_group = NULL,
+        metric_type = NULL,
+        lulc_class = NULL,
+        edge_depth = NULL,
+        gap_crossing = NULL,
+        scale = NULL,
+        resolution = NULL,
+        cores = 1,
+        path = "."){
 
     # options
     options(timeout = 1e5)
 
     # directory
+    initial_path <- getwd()
     setwd(path)
 
     # rename
@@ -47,8 +49,7 @@ atlantic_spatial_download <- function(id = NULL,
     # resolution_filter <- resolution
 
     # filter
-    atlantic_spatial_download_filter <- atlantic_spatial %>%
-        dplyr::filter(id %in% id_filter)
+    atlantic_spatial_download_filter <- dplyr::filter(atlantic_spatial, id %in% id_filter)
 
     # atlantic_spatial_download_filter <- atlantic_spatial %>%
     #     dplyr::filter(id %in% id_filter |
@@ -62,14 +63,36 @@ atlantic_spatial_download <- function(id = NULL,
     #                   resolution %in% resolution_filter)
 
     # prepare data
-    atlantic_spatial_download_filter_download <- atlantic_spatial_download_filter %>%
-        dplyr::select(file_name, link_osf_tif, link_osf_tfw) %>%
-        tidyr::pivot_longer(cols = -file_name, names_to = "destfile", values_to = "url") %>%
-        dplyr::mutate(destfile = stringr::str_replace_all(destfile, "link_osf_", "."),
-                      destfile = paste0(file_name, destfile))
-    atlantic_spatial_download_filter_download
+    if(any(id_filter %in% 0)){
+
+        atlantic_spatial_download_filter_download_limit <- atlantic_spatial_download_filter %>%
+            dplyr::filter(id == 0) %>%
+            dplyr::select(file_name, zenodo_link_main) %>%
+            dplyr::rename(url = zenodo_link_main, destfile = file_name)
+
+        atlantic_spatial_download_filter_download_metrics <- atlantic_spatial_download_filter %>%
+            dplyr::filter(id != 0) %>%
+            dplyr::select(file_name, zenodo_link_main, zenodo_link_auxiliary) %>%
+            tidyr::pivot_longer(cols = -file_name, names_to = "destfile", values_to = "url") %>%
+            dplyr::mutate(destfile = paste0(file_name, c(".tif", ".tfw"))) %>%
+            dplyr::select(-file_name)
+
+        atlantic_spatial_download_filter_download <- rbind(
+            atlantic_spatial_download_filter_download_limit,
+            atlantic_spatial_download_filter_download_metrics)
+
+    } else{
+
+        atlantic_spatial_download_filter_download <- atlantic_spatial_download_filter %>%
+            dplyr::select(file_name, zenodo_link_main, zenodo_link_auxiliary) %>%
+            tidyr::pivot_longer(cols = -file_name, names_to = "destfile", values_to = "url") %>%
+            dplyr::mutate(destfile = paste0(file_name, c(".tif", ".tfw")))
+
+    }
 
     # download
+    cat("Starting download")
+
     doParallel::registerDoParallel(parallelly::availableCores(omit = 2))
 
     foreach::foreach(i=1:nrow(atlantic_spatial_download_filter_download)) %dopar% {
@@ -82,5 +105,10 @@ atlantic_spatial_download <- function(id = NULL,
     }
 
     doParallel::stopImplicitCluster()
+
+    cat("Download completed")
+
+    # back directory
+    setwd(initial_path)
 
 }
