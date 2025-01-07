@@ -147,7 +147,8 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># import data</span></span></span>
 <span class="r-in"><span><span class="fu">atlanticr</span><span class="fu">::</span><span class="fu">atlantic_spatial_download</span><span class="op">(</span>id <span class="op">=</span> <span class="fl">3</span>, path <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Starting downloadDownload completed</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Starting download</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in {    url &lt;- atlantic_spatial_download_filter_download[i, ]$url    destfile &lt;- atlantic_spatial_download_filter_download[i,         ]$destfile    download.file(url = url, destfile = destfile, mode = "wb")}:</span> task 1 failed - "cannot open URL 'https://zenodo.org/records/14529439/files/003_atlantic_spatial_forest_vegetation_binary.tif?download=1'"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># delete</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/unlink.html" class="external-link">unlink</a></span><span class="op">(</span><span class="st">"003_atlantic_spatial_forest_vegetation_binary*"</span><span class="op">)</span></span></span>

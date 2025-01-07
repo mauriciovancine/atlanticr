@@ -4,7 +4,7 @@ library(atlanticr)
 atlantic_spatial
 
 # import data
-atlanticr::atlantic_spatial_download(id = 3, path = ".")
+atlanticr::atlantic_spatial_download(id = 0, path = ".")
 
 # delete
-unlink("003_atlantic_spatial_forest_vegetation_binary*")
+unlink("000_atlantic_spatial_delimitation*")

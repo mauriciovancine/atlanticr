@@ -24,6 +24,7 @@ Config/Needs/website: rmarkdown
 Depends: 
     R (>= 4.0),
     dplyr,
+    tidyr,
     magrittr,
     foreach,
     parallelly,
