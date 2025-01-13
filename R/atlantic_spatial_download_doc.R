@@ -91,7 +91,7 @@ atlantic_spatial_download <- function(
     }
 
     # download
-    cat("Starting download")
+    cat("Starting download... \n")
 
     doParallel::registerDoParallel(parallelly::availableCores(omit = 2))
 
@@ -100,7 +100,8 @@ atlantic_spatial_download <- function(
         url <- atlantic_spatial_download_filter_download[i, ]$url
         destfile <- atlantic_spatial_download_filter_download[i, ]$destfile
 
-        download.file(url = url, destfile = destfile, mode = "wb")
+        # cat(paste0("Dowloading ", destfile), "\n")
+        download.file(url = url, destfile = destfile, quiet = TRUE, mode = "wb")
 
     }
 
