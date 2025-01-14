@@ -71,7 +71,7 @@ atlantic_spatial_download <- function(
                 dplyr::filter(id == 0) %>%
                 dplyr::select(file_name, zenodo_link_main) %>%
                 dplyr::rename(url = zenodo_link_main, destfile = file_name) %>%
-                dplyr::mutate(destfile = paste0(file_name, ".gpkg"))
+                dplyr::mutate(destfile = paste0(destfile, ".gpkg"))
 
         } else{
 
@@ -79,7 +79,7 @@ atlantic_spatial_download <- function(
                 dplyr::filter(id == 0) %>%
                 dplyr::select(file_name, zenodo_link_main) %>%
                 dplyr::rename(url = zenodo_link_main, destfile = file_name) %>%
-                dplyr::mutate(destfile = paste0(file_name, ".gpkg"))
+                dplyr::mutate(destfile = paste0(destfile, ".gpkg"))
 
             atlantic_spatial_download_filter_download_metrics <- atlantic_spatial_download_filter %>%
                 dplyr::filter(id != 0) %>%
