@@ -70,14 +70,14 @@ atlantic_spatial_download <- function(
             atlantic_spatial_download_filter_download <- atlantic_spatial_download_filter %>%
                 dplyr::filter(id == 0) %>%
                 dplyr::select(file_name, zenodo_link_main) %>%
-                dplyr::rename(url = zenodo_link_main, destfile = file_name)
+                dplyr::rename(url = zenodo_link_main, destfile = paste(file_name, ".gpkg"))
 
         } else{
 
             atlantic_spatial_download_filter_download_limit <- atlantic_spatial_download_filter %>%
                 dplyr::filter(id == 0) %>%
                 dplyr::select(file_name, zenodo_link_main) %>%
-                dplyr::rename(url = zenodo_link_main, destfile = file_name)
+                dplyr::rename(url = zenodo_link_main, destfile = paste(file_name, ".gpkg"))
 
             atlantic_spatial_download_filter_download_metrics <- atlantic_spatial_download_filter %>%
                 dplyr::filter(id != 0) %>%
