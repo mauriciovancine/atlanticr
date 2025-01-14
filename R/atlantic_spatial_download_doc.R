@@ -65,21 +65,31 @@ atlantic_spatial_download <- function(
     # prepare data
     if(any(id_filter %in% 0)){
 
-        atlantic_spatial_download_filter_download_limit <- atlantic_spatial_download_filter %>%
-            dplyr::filter(id == 0) %>%
-            dplyr::select(file_name, zenodo_link_main) %>%
-            dplyr::rename(url = zenodo_link_main, destfile = file_name)
+        if(unique(length(id_filter) == 1 & id_filter == 0)){
 
-        atlantic_spatial_download_filter_download_metrics <- atlantic_spatial_download_filter %>%
-            dplyr::filter(id != 0) %>%
-            dplyr::select(file_name, zenodo_link_main, zenodo_link_auxiliary) %>%
-            tidyr::pivot_longer(cols = -file_name, names_to = "destfile", values_to = "url") %>%
-            dplyr::mutate(destfile = paste0(file_name, c(".tif", ".tfw"))) %>%
-            dplyr::select(-file_name)
+            atlantic_spatial_download_filter_download <- atlantic_spatial_download_filter %>%
+                dplyr::filter(id == 0) %>%
+                dplyr::select(file_name, zenodo_link_main) %>%
+                dplyr::rename(url = zenodo_link_main, destfile = file_name)
 
-        atlantic_spatial_download_filter_download <- rbind(
-            atlantic_spatial_download_filter_download_limit,
-            atlantic_spatial_download_filter_download_metrics)
+        } else{
+
+            atlantic_spatial_download_filter_download_limit <- atlantic_spatial_download_filter %>%
+                dplyr::filter(id == 0) %>%
+                dplyr::select(file_name, zenodo_link_main) %>%
+                dplyr::rename(url = zenodo_link_main, destfile = file_name)
+
+            atlantic_spatial_download_filter_download_metrics <- atlantic_spatial_download_filter %>%
+                dplyr::filter(id != 0) %>%
+                dplyr::select(file_name, zenodo_link_main, zenodo_link_auxiliary) %>%
+                tidyr::pivot_longer(cols = -file_name, names_to = "destfile", values_to = "url") %>%
+                dplyr::mutate(destfile = paste0(file_name, c(".tif", ".tfw"))) %>%
+                dplyr::select(-file_name)
+
+            atlantic_spatial_download_filter_download <- rbind(
+                atlantic_spatial_download_filter_download_limit,
+                atlantic_spatial_download_filter_download_metrics)
+        }
 
     } else{
 
