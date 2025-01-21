@@ -86,23 +86,19 @@ atlantic_spatial_download <- function(
     # download
     cat("Starting download... \n")
 
-    doParallel::registerDoParallel(parallelly::availableCores(omit = 2))
-
-    foreach::foreach(i = 1:nrow(atlantic_spatial_download_filter_download)) %dopar% {
+    for(i in 1:nrow(atlantic_spatial_download_filter_download)){
 
         url <- atlantic_spatial_download_filter_download[i, ]$url
         destfile <- atlantic_spatial_download_filter_download[i, ]$destfile
 
         tryCatch({
-            download.file(url = url, destfile = destfile, quiet = TRUE, mode = "wb")
+            download.file(url = url, destfile = destfile, quiet = FALSE, mode = "wb")
             cat(paste0("Successfully downloaded ", destfile, "\n"))
         }, error = function(e) {
             cat(paste0("Error downloading ", destfile, ": ", e$message, "\n"))
         })
 
     }
-
-    doParallel::stopImplicitCluster()
 
     cat("Download completed\n")
 
