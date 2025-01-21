@@ -39,28 +39,9 @@ atlantic_spatial_download <- function(
 
     # rename
     id_filter <- id
-    # metric_filter <- metric
-    # metric_group_filter <- metric_group
-    # metric_type_filter <- metric_type
-    # lulc_class_filter <- lulc_class
-    # edge_depth_filter <- edge_depth
-    # gap_crossing_filter <- gap_crossing
-    # scale_filter <- scale
-    # resolution_filter <- resolution
 
     # filter
     atlantic_spatial_download_filter <- dplyr::filter(atlantic_spatial, id %in% id_filter)
-
-    # atlantic_spatial_download_filter <- atlantic_spatial %>%
-    #     dplyr::filter(id %in% id_filter |
-    #                   metric %in% metric_filter |
-    #                   metric_group %in% metric_group_filter |
-    #                   metric_type %in% metric_type_filter |
-    #                   lulc_class %in% lulc_class_filter |
-    #                   edge_depth %in% edge_depth_filter |
-    #                   gap_crossing %in% gap_crossing_filter |
-    #                   scale %in% scale_filter |
-    #                   resolution %in% resolution_filter)
 
     # prepare data
     if(any(id_filter %in% 0)){
@@ -107,19 +88,23 @@ atlantic_spatial_download <- function(
 
     doParallel::registerDoParallel(parallelly::availableCores(omit = 2))
 
-    foreach::foreach(i=1:nrow(atlantic_spatial_download_filter_download)) %dopar% {
+    foreach::foreach(i = 1:nrow(atlantic_spatial_download_filter_download)) %dopar% {
 
         url <- atlantic_spatial_download_filter_download[i, ]$url
         destfile <- atlantic_spatial_download_filter_download[i, ]$destfile
 
-        # cat(paste0("Dowloading ", destfile), "\n")
-        download.file(url = url, destfile = destfile, quiet = TRUE, mode = "wb")
+        tryCatch({
+            download.file(url = url, destfile = destfile, quiet = TRUE, mode = "wb")
+            cat(paste0("Successfully downloaded ", destfile, "\n"))
+        }, error = function(e) {
+            cat(paste0("Error downloading ", destfile, ": ", e$message, "\n"))
+        })
 
     }
 
     doParallel::stopImplicitCluster()
 
-    cat("Download completed")
+    cat("Download completed\n")
 
     # back directory
     setwd(initial_path)
