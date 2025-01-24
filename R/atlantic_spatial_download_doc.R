@@ -1,19 +1,27 @@
-#' Atlantic Spatial
+#' Download layers from the Atlantic Spatial dataset
 #'
-#' ATLANTIC SPATIAL: a data set of landscape, topographic, hydrological, and anthropogenic metrics for the Atlantic Forest
+#' This functions provides a wrapper to download the metrics from the ATLANTIC SPATIAL dataset
+#' for the Atlantic Forest from the corresponding Zenodo repositories where they are stored.
+#' A description of the metrics can be found in the [[atlanticr::atlantic_spatial]] table.
 #'
-#' @param metric \cr
-#' @param metric_group  \cr
-#' @param metric_type  \cr
-#' @param lulc_class  \cr
-#' @param edge_depth \cr
-#' @param gap_crossing \cr
-#' @param scale  \cr
-#' @param resolution  \cr
-#' @param cores  \cr
-#' @param path \cr
+#' @param id `[integer]` \cr Integer or vector of integers with the IDs of the metric
+#' layers to be downloaded. Metric IDs and description can be found in the
+#' [[atlanticr::atlantic_spatial]] table.
+#' @param path `[character]` \cr Path of the folder where the downloaded files should
+#' be saved. Default is the current directory, `"."`.
+#'
+#' @param metric \cr Not yet implemented.
+#' @param metric_group \cr Not yet implemented.
+#' @param metric_type \cr Not yet implemented.
+#' @param lulc_class \cr Not yet implemented.
+#' @param edge_depth \cr Not yet implemented.
+#' @param gap_crossing \cr Not yet implemented.
+#' @param scale \cr Not yet implemented.
+#' @param resolution \cr Not yet implemented.
+#' @param cores \cr Not yet implemented.
 #'
 #' @example examples/atlantic_spatial_download_example.R
+#' @references {Vancine et al. ATLANTIC SPATIAL: a data set of landscape, topographic, hydrological, and anthropogenic metrics for the Atlantic Forest. Ecology.}
 #'
 #' @name atlantic_spatial_download
 #' @export
@@ -32,10 +40,6 @@ atlantic_spatial_download <- function(
 
     # options
     options(timeout = 1e5)
-
-    # directory
-    initial_path <- getwd()
-    setwd(path)
 
     # rename
     id_filter <- id
@@ -92,7 +96,7 @@ atlantic_spatial_download <- function(
         destfile <- atlantic_spatial_download_filter_download[i, ]$destfile
 
         tryCatch({
-            download.file(url = url, destfile = destfile, quiet = FALSE, mode = "wb")
+            download.file(url = url, destfile = paste0(path, "/", destfile), quiet = FALSE, mode = "wb")
             cat(paste0("Successfully downloaded ", destfile, "\n"))
         }, error = function(e) {
             cat(paste0("Error downloading ", destfile, ": ", e$message, "\n"))
@@ -100,9 +104,7 @@ atlantic_spatial_download <- function(
 
     }
 
+    # done
     cat("Download completed\n")
-
-    # back directory
-    setwd(initial_path)
 
 }
