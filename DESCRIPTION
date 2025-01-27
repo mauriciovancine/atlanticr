@@ -1,5 +1,5 @@
 Package: atlanticr
-Title: provides data from the ATLANTIC SERIES
+Title: Easy access to data from the ATLANTIC SERIES of data papers for the Atlantic Forest.
 Version: 0.0.0.9000
 Authors@R: c(
     person("Maurício Humberto", "Vancine", email = "mauricio.vancine@gmail.com",
@@ -13,7 +13,7 @@ Authors@R: c(
     person("Milton Cezar", "Ribeiro", email = "milton.c.ribeiro@unesp.br",
         role = c("aut"), comment = c(ORCID = "0000-0002-4312-202X")))
 Maintainer: Maurício Humberto Vancine <mauricio.vancine@gmail.com>
-Description: Provides data from the ATLANTIC SERIES, data papers from Atlantic Forest
+Description: Provides data from the ATLANTIC SERIES of data papers for the Atlantic Forest.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
