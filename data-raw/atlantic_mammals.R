@@ -8,6 +8,9 @@
 library(tidyverse)
 library(janitor)
 
+# source
+source("R/aux_fix_enconding.R")
+
 # atlantic mammals ----------------------------------------------------
 
 # download
@@ -19,6 +22,10 @@ unzip(zipfile = "data-raw/ecy2785-sup-0001-datas1.zip", exdir = "data-raw")
 # fix data
 atlantic_mammals <- readr::read_csv("data-raw/ATLANTIC_MAMMAL_MID_LARGE _assemblages_and_sites.csv") %>%
     janitor::clean_names()
+
+# fix encongind
+encoding_results <- fix_encoding(atlantic_mammals)
+atlantic_mammals <- encoding_results$data
 
 # save data
 usethis::use_data(atlantic_mammals, overwrite = TRUE)
